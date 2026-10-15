@@ -1,0 +1,28 @@
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    border: var(--border-width) solid black;
+    pointer-events: none;
+}
+
+body {
+    padding: var(--border-width);
+}
+
+header::before {
+    content: "";
+    position: fixed;
+    inset: 12px 12px auto;
+    height: 100%;
+    box-shadow: 0 -50px 0 50px black;
+    border-top-left-radius: var(--border-corner-radius);
+    border-top-right-radius: var(--border-corner-radius);
+    pointer-events: none;
+    z-index: -1;
+}
+
+header a {
+    font-family: Inter, sans-serif;
+    color: white;
+}

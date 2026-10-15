@@ -1,0 +1,60 @@
+.header__notch {
+    --top-notch-radius: 8px;
+    --notch-radius: 12px;
+}
+
+.header__notch:hover {
+    --top-notch-radius: 14px;
+    --notch-radius: 20px;
+}
+
+.header__notch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50px;
+    left: calc(-1 * var(--top-notch-radius));
+    width: var(--top-notch-radius);
+    border-top-right-radius: var(--top-notch-radius);
+    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 black;
+}
+
+.header__notch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50px;
+    right: calc(-1 * var(--top-notch-radius));
+    width: var(--top-notch-radius);
+    border-top-left-radius: var(--top-notch-radius);
+    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 black;
+}
+
+.header__notch {
+    position: fixed;
+    top: 12px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+
+    width: 180px;
+    height: 36px;
+
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    border-radius: 0 0 var(--notch-radius) var(--notch-radius);
+    isolation: isolate;
+
+    transition: width 500ms ease,
+    height 500ms ease;
+}
+
+.header__notch:hover {
+    width: 600px;
+    height: 180px;
+    box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
+    transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
