@@ -1,11 +1,13 @@
 .header__notch {
     --top-notch-radius: 8px;
     --notch-radius: 12px;
+    --columns: 1;
 }
 
 .header__notch:hover {
     --top-notch-radius: 14px;
     --notch-radius: 20px;
+    --columns: 3;
 }
 
 .header__notch::before {
@@ -42,14 +44,14 @@
     height: 36px;
 
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     border-radius: 0 0 var(--notch-radius) var(--notch-radius);
     isolation: isolate;
 
     transition: width 500ms ease,
     height 500ms ease;
+
+    z-index: 100;
 }
 
 .header__notch:hover {
@@ -57,4 +59,29 @@
     height: 180px;
     box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
     transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.header__nav {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    align-items: center;
+}
+
+.header__nav a {
+    text-decoration: none;
+    text-align: center;
+    margin: 4px;
+}
+
+.header__nav__link--active {
+    font-weight: bold;
+}
+
+.header__nav__link--inactive {
+    display: none;
+}
+
+.header__notch:hover .header__nav__link--inactive {
+    display: block;
 }

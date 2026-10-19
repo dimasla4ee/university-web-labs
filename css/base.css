@@ -8,6 +8,8 @@ body::before {
 
 body {
     padding: var(--border-width);
+    scroll-behavior: smooth;
+    background-color: #bdb197;
 }
 
 header::before {
@@ -19,7 +21,7 @@ header::before {
     border-top-left-radius: var(--border-corner-radius);
     border-top-right-radius: var(--border-corner-radius);
     pointer-events: none;
-    z-index: -1;
+    z-index: 1;
 }
 
 header a {
