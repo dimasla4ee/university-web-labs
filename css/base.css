@@ -12,6 +12,11 @@ body {
     background-color: #bdb197;
 }
 
+header {
+    grid-area: header;
+    grid-column: 1 / -1;
+}
+
 header::before {
     content: "";
     position: fixed;
@@ -27,4 +32,15 @@ header::before {
 header a {
     font-family: Inter, sans-serif;
     color: white;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar main main";
+    gap: 24px;
+    min-height: 100vh;
 }

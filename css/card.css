@@ -1,0 +1,16 @@
+.cards {
+    grid-column: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards section {
+    flex: 1 1 calc(33.333% - 14px);
+
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding: 200px 20px;
+    border-radius: 8px;
+}
