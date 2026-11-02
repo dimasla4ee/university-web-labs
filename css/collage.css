@@ -1,13 +1,39 @@
+#collage {
+    grid-column: 2 / -1;
+
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    animation: collage-collapse linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 500px;
+    justify-self: stretch;
+}
+
+@keyframes collage-collapse {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: calc(100% - 220px);
+    }
+}
+
 .collage {
     position: relative;
-    margin: 36px 0;
     aspect-ratio: 16 / 9;
-    grid-column: 1 / -1;
 
     --slots: 7;
     --mask-block-width: 13%;
     --mask-block-height: 90%;
     --mask-block-width-hover: 14%;
+
+    transform: translateY(-40px);
 }
 
 .collage__video {
