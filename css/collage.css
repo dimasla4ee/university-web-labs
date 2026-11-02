@@ -7,7 +7,7 @@
     --slots: 7;
     --mask-block-width: 13%;
     --mask-block-height: 90%;
-    --mask-block-width-hover: 13.6%;
+    --mask-block-width-hover: 14%;
 }
 
 .collage__video {
@@ -32,17 +32,17 @@
     mask-repeat: no-repeat;
 
     -webkit-mask-position: 0 50%,
-    16.667% calc(50% + var(--mask-offset)),
-    33.333% 50%,
-    50% calc(50% - var(--mask-offset)),
-    66.667% 50%,
+    calc(100% / (var(--slots) - 1) * 1) calc(50% + var(--mask-offset)),
+    calc(100% / (var(--slots) - 1) * 2) 50%,
+    calc(100% / (var(--slots) - 1) * 3) calc(50% - var(--mask-offset)),
+    calc(100% / (var(--slots) - 1) * 4) 50%,
     100% calc(50% - var(--mask-offset));
 
     mask-position: 0 50%,
-    16.667% calc(50% + var(--mask-offset)),
-    33.333% 50%,
-    50% calc(50% - var(--mask-offset)),
-    66.667% 50%,
+    calc(100% / (var(--slots) - 1) * 1) calc(50% + var(--mask-offset)),
+    calc(100% / (var(--slots) - 1) * 2) 50%,
+    calc(100% / (var(--slots) - 1) * 3) calc(50% - var(--mask-offset)),
+    calc(100% / (var(--slots) - 1) * 4) 50%,
     100% calc(50% - var(--mask-offset));
 
     transition: mask-size 700ms ease;
@@ -63,9 +63,19 @@
 }
 
 .collage__text-block {
+    position: absolute;
+    left: calc(5 * (100% - var(--mask-block-width)) / (var(--slots) - 1));
     width: var(--mask-block-width);
-    margin-left: auto;
-    margin-right: calc(100% / (var(--slots) - 3) - var(--mask-block-width));
-    display: grid;
-    place-items: center;
+    height: 100%;
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    font-family: "Literata", serif;
+    font-size: 60px;
+}
+
+.rotated-text {
+    writing-mode: vertical-rl;
+    white-space: nowrap;
 }

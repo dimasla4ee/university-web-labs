@@ -4,12 +4,13 @@ body::before {
     inset: 0;
     border: var(--border-width) solid black;
     pointer-events: none;
+    z-index: 1000;
 }
 
 body {
     padding: var(--border-width);
     scroll-behavior: smooth;
-    background-color: #bdb197;
+    background-color: #e7e5df;
 }
 
 header {
@@ -43,4 +44,11 @@ header a {
     "sidebar main main";
     gap: 24px;
     min-height: 100vh;
+}
+
+.literata {
+    font-family: "Literata", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
