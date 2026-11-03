@@ -7,12 +7,16 @@
 
 .cards section {
     flex: 1 1 calc(33.333% - 14px);
+    flex-direction: column;
+    gap: 14px;
+    justify-content: flex-end;
     box-sizing: border-box;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    padding: 20px;
     color: #ffffff;
     aspect-ratio: 10 / 16;
 }
@@ -39,11 +43,55 @@
 }
 
 .cards section h1 {
+    color: white;
     position: relative;
     z-index: 3;
     margin: 0;
-    padding: 20px;
     font-size: 24px;
     font-weight: 200;
     font-family: "Literata", serif;
+}
+
+.cards section p {
+    color: #a1a1a1;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: SansSerif, sans-serif;
+}
+
+.cards__chip {
+    color: #ffffff;
+    position: relative;
+    border-radius: 25px;
+    border: 1px solid #a5a5a5;
+    padding: 4px 8px;
+    z-index: 3;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: SansSerif, sans-serif;
+    white-space: nowrap;
+}
+
+.cards__chip-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+hr {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(169 169 169);
+    margin: 0;
+    padding: 0;
 }
