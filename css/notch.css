@@ -85,3 +85,12 @@
 .header__notch:hover .header__nav__link--inactive {
     display: block;
 }
+
+.logo {
+    background-color: #000000;
+    display: block;
+    width: 200px;
+    height: 100px;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}

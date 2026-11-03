@@ -6,7 +6,7 @@
     width: fit-content;
     height: fit-content;
 
-    margin-top: calc(50svh - 100px);
+    margin-top: calc(40svh - 100px);
 
     grid-area: sidebar;
     grid-column: 1;
