@@ -1,8 +1,7 @@
 :root {
-    color-scheme: light dark;
-
     --frame-w: 12px;
     --frame-z: 1000;
+    --card-content-z: 100;
 
     --frame-color: black;
     --on-frame-color: white;
@@ -10,10 +9,12 @@
             #e7e5df,
             #252522
     );
-    --text-color: light-dark(
+    --on-background-color: light-dark(
             black,
             white
     );
+    --on-card-primary-color: white;
+    --on-card-secondary-color: #A9A9A9FF;
 
 }
 

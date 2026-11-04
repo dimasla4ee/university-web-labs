@@ -1,50 +1,22 @@
-.hero {
-    grid-area: hero;
-
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    box-sizing: border-box;
-
-    animation: collage-collapse linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 500px;
-    justify-self: stretch;
-}
-
-@keyframes collage-collapse {
-    from {
-        width: 100%;
-    }
-
-    to {
-        width: calc(100% - 240px);
-    }
-}
-
 .collage {
-    position: relative;
-    aspect-ratio: 16 / 9;
-
     --slots: 7;
     --mask-block-width: 13%;
     --mask-block-height: 90%;
     --mask-block-width-hover: 14%;
 
+    position: relative;
+    aspect-ratio: 16 / 9;
     transform: translateY(-40px);
 }
 
 .collage__video {
+    --mask: linear-gradient(black, black);
+    --mask-offset: 20px;
+
     position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    --mask: linear-gradient(black, black);
-    --mask-offset: 20px;
 
     -webkit-mask-image: var(--mask), var(--mask), var(--mask),
     var(--mask), var(--mask), var(--mask);
@@ -94,11 +66,11 @@
     width: var(--mask-block-width);
     height: 100%;
     display: flex;
-    font-weight: 400;
     justify-content: center;
     align-items: center;
-    font-family: "Literata", serif;
-    font-size: 60px;
+    font-weight: var(--fw-regular);
+    font-family: var(--font-display), serif;
+    font-size: var(--fs-hero);
 }
 
 .rotated-text {

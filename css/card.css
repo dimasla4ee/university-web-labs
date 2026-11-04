@@ -1,5 +1,5 @@
 .cards {
-    grid-column: 2;
+    grid-area: cards;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -17,7 +17,6 @@
     display: flex;
     align-items: flex-start;
     padding: 20px;
-    color: #ffffff;
     aspect-ratio: 10 / 16;
 }
 
@@ -42,56 +41,52 @@
     mask-image: linear-gradient(to top, black 0%, transparent 60%);
 }
 
-.cards section h1 {
-    color: white;
+.cards section h1,
+.cards section p,
+.cards__chip-container,
+.cards section hr {
     position: relative;
-    z-index: 3;
+    z-index: var(--card-content-z);
     margin: 0;
-    font-size: 24px;
-    font-weight: 200;
-    font-family: "Literata", serif;
+}
+
+
+.cards section h1 {
+    color: var(--on-card-primary-color);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-light);
+    font-family: var(--font-display), serif;
 }
 
 .cards section p {
-    color: #a1a1a1;
-    position: relative;
-    z-index: 3;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 200;
-    font-family: sans-serif;
-}
-
-.cards__chip {
-    color: #ffffff;
-    position: relative;
-    border-radius: 25px;
-    border: 1px solid #a5a5a5;
-    padding: 4px 8px;
-    z-index: 3;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 200;
-    font-family: sans-serif;
-    white-space: nowrap;
+    color: var(--on-card-secondary-color);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-thin);
+    font-family: var(--font-body), sans-serif;
 }
 
 .cards__chip-container {
-    position: relative;
-    z-index: 3;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
-hr {
-    position: relative;
-    z-index: 3;
+.cards__chip {
+    color: var(--on-card-primary-color);
+    border: 1px solid var(--on-card-secondary-color);
+    border-radius: 25px;
+    padding: 4px 8px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-thin);
+    font-family: var(--font-body), sans-serif;
+    white-space: nowrap;
+}
+
+.cards section hr {
     width: 100%;
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid rgb(169 169 169);
-    margin: 0;
+    background-color: var(--on-card-secondary-color);
     padding: 0;
 }

@@ -2,17 +2,15 @@
     --top-notch-radius: 8px;
     --notch-radius: 12px;
     --columns: 1;
+    --header-w: 180px;
+    --header-h: 36px;
 
     position: fixed;
-    top: 12px;
-    background-color: black;
-    left: 0;
-    right: 0;
+    background-color: var(--frame-color);
+    width: var(--header-w);
+    height: var(--header-h);
+    inset: var(--frame-w) 0 0 0;
     margin-inline: auto;
-
-    width: 180px;
-    height: 36px;
-
     box-sizing: border-box;
     align-items: center;
     border-radius: 0 0 var(--notch-radius) var(--notch-radius);
@@ -27,9 +25,8 @@
     --top-notch-radius: 14px;
     --notch-radius: 20px;
     --columns: 3;
-
-    width: 600px;
-    height: 180px;
+    --header-w: 600px;
+    --header-h: 180px;
 
     box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
     transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
@@ -40,7 +37,7 @@
     content: "";
     position: absolute;
     top: 0;
-    height: 30px;
+    height: var(--header-h);
     width: var(--top-notch-radius);
     box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 var(--frame-color);
 }
