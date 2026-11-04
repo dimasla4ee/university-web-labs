@@ -2,37 +2,7 @@
     --top-notch-radius: 8px;
     --notch-radius: 12px;
     --columns: 1;
-}
 
-.header__notch:hover {
-    --top-notch-radius: 14px;
-    --notch-radius: 20px;
-    --columns: 3;
-}
-
-.header__notch::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 50px;
-    left: calc(-1 * var(--top-notch-radius));
-    width: var(--top-notch-radius);
-    border-top-right-radius: var(--top-notch-radius);
-    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 black;
-}
-
-.header__notch::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 50px;
-    right: calc(-1 * var(--top-notch-radius));
-    width: var(--top-notch-radius);
-    border-top-left-radius: var(--top-notch-radius);
-    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 black;
-}
-
-.header__notch {
     position: fixed;
     top: 12px;
     background-color: black;
@@ -47,18 +17,42 @@
     align-items: center;
     border-radius: 0 0 var(--notch-radius) var(--notch-radius);
     isolation: isolate;
+    z-index: var(--frame-z);
 
     transition: width 500ms ease,
     height 500ms ease;
-
-    z-index: 100;
 }
 
 .header__notch:hover {
+    --top-notch-radius: 14px;
+    --notch-radius: 20px;
+    --columns: 3;
+
     width: 600px;
     height: 180px;
+
     box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
     transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.header__notch::before,
+.header__notch::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: var(--top-notch-radius);
+    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 var(--frame-color);
+}
+
+.header__notch::before {
+    left: calc(-1 * var(--top-notch-radius));
+    border-top-right-radius: var(--top-notch-radius);
+}
+
+.header__notch::after {
+    right: calc(-1 * var(--top-notch-radius));
+    border-top-left-radius: var(--top-notch-radius);
 }
 
 .header__nav {
@@ -74,14 +68,20 @@
     margin: 4px;
 }
 
-.header__nav__link--active {
-    font-weight: bold;
+.header__link--active {
+    font-weight: var(--fw-regular);
 }
 
-.header__nav__link--inactive {
+.header__link--inactive {
+    font-weight: var(--fw-light);
     display: none;
 }
 
-.header__notch:hover .header__nav__link--inactive {
+.header__notch:hover .header__link--inactive {
     display: block;
+}
+
+header a {
+    font-family: var(--font-body), sans-serif;
+    color: var(--on-frame-color);
 }

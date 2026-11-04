@@ -59,7 +59,7 @@
     margin: 0;
     font-size: 16px;
     font-weight: 200;
-    font-family: SansSerif, sans-serif;
+    font-family: sans-serif;
 }
 
 .cards__chip {
@@ -72,7 +72,7 @@
     margin: 0;
     font-size: 16px;
     font-weight: 200;
-    font-family: SansSerif, sans-serif;
+    font-family: sans-serif;
     white-space: nowrap;
 }
 

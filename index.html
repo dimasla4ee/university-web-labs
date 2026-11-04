@@ -7,12 +7,14 @@
 
     <title>Title</title>
 
-    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/notch.css">
+    <link rel="stylesheet" href="css/frame.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/collage.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/layout.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,20 +35,20 @@
     <header>
         <div class="header__notch">
             <nav class="header__nav">
-                <a href="" class="header__nav__link--active">Главная</a>
-                <a href="html/about.html" class="header__nav__link--inactive">О нас</a>
-                <a href="html/contacts.html" class="header__nav__link--inactive">Контакты</a>
+                <a href="" class="header__link--active">Главная</a>
+                <a href="html/about.html" class="header__link--inactive">О нас</a>
+                <a href="html/contacts.html" class="header__link--inactive">Контакты</a>
             </nav>
         </div>
     </header>
 
-    <section id="collage">
+    <section class= "hero" id="collage">
         <div class="collage">
             <video autoplay muted loop playsinline class="collage__video">
                 <source src="resources/videos/primetime-trailer.webm" type="video/mp4">
             </video>
 
-            <div class="collage_mask-layer">
+            <div class="collage__mask">
                 <div class="collage__text-block">
                     <div class="rotated-text">Праймтайм</div>
                 </div>
@@ -57,13 +59,13 @@
     <div class="sidebar">
         <nav class="sidebar__nav">
             <span class="logo" style="--icon: url('/resources/images/a24_logo.svg');" aria-hidden="true"></span>
-            <a href="#collage" class="sidebar__nav__link">Трейлер</a>
-            <a href="#section1" class="sidebar__nav__link">Увидеть всё</a>
-            <a href="#section2" class="sidebar__nav__link">Мисти Грин</a>
-            <a href="#section3" class="sidebar__nav__link">Праймтайм</a>
-            <a href="#section4" class="sidebar__nav__link">Натиск</a>
-            <a href="#section5" class="sidebar__nav__link">Закулисье реальности</a>
-            <a href="#section6" class="sidebar__nav__link">Мать Мария</a>
+            <a href="#collage" class="sidebar__link">Трейлер</a>
+            <a href="#section1" class="sidebar__link">Увидеть всё</a>
+            <a href="#section2" class="sidebar__link">Мисти Грин</a>
+            <a href="#section3" class="sidebar__link">Праймтайм</a>
+            <a href="#section4" class="sidebar__link">Натиск</a>
+            <a href="#section5" class="sidebar__link">Закулисье реальности</a>
+            <a href="#section6" class="sidebar__link">Мать Мария</a>
         </nav>
     </div>
 

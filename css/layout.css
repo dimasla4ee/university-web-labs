@@ -1,0 +1,17 @@
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "sidebar hero hero"
+    "sidebar main main";
+    "footer footer footer";
+    gap: 24px;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    grid-column: 1 / -1;
+}

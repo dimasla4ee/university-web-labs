@@ -1,0 +1,34 @@
+:root {
+    color-scheme: light dark;
+
+    --frame-w: 12px;
+    --frame-z: 1000;
+
+    --frame-color: black;
+    --on-frame-color: white;
+    --background-color: light-dark(
+            #e7e5df,
+            #252522
+    );
+    --text-color: light-dark(
+            black,
+            white
+    );
+
+}
+
+:root {
+    --font-display: "Literata", Georgia, serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    --fs-xs: 12px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    --fs-lg: 24px;
+    --fs-hero: 60px;
+
+    --fw-thin: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}

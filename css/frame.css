@@ -1,0 +1,21 @@
+header::before,
+body::before {
+    content: "";
+    position: fixed;
+    z-index: var(--frame-z);
+    pointer-events: none;
+}
+
+header::before {
+    --frame-corner-radius: 24px;
+
+    inset: var(--frame-w);
+    box-shadow: 0 0 0 var(--frame-w) var(--frame-color);
+    border-top-left-radius: var(--frame-corner-radius);
+    border-top-right-radius: var(--frame-corner-radius);
+}
+
+body::before {
+    inset: 0;
+    border: var(--frame-w) solid var(--frame-color);
+}

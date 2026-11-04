@@ -27,10 +27,9 @@
     height: 100px;
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
-
 }
 
-.sidebar__nav__link {
+.sidebar__link {
     position: relative;
 
     display: block;
@@ -49,23 +48,23 @@
     padding-left 0.25s ease;
 }
 
-.sidebar__nav__link:hover {
+.sidebar__link:hover {
     color: #000000;
     background: rgb(0 0 0 / 0.07);
     padding-left: 18px;
 }
 
-.sidebar__nav__link:active {
+.sidebar__link:active {
     background: rgb(0 0 0 / 0.12);
 }
 
 .sidebar__nav__link--active,
-.sidebar__nav__link:focus-visible {
+.sidebar__link:focus-visible {
     color: #000000;
     background: rgb(0 0 0 / 0.1);
 }
 
-.sidebar__nav__link::before {
+.sidebar__link::before {
     content: "";
     position: absolute;
     left: 0;
@@ -80,6 +79,6 @@
     transition: transform 0.25s ease;
 }
 
-.sidebar__nav__link:hover::before {
+.sidebar__link:hover::before {
     transform: translateY(-50%) scaleY(1);
 }

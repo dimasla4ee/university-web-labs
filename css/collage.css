@@ -1,5 +1,5 @@
-#collage {
-    grid-column: 2 / -1;
+.hero {
+    grid-area: hero;
 
     min-height: 100svh;
     display: flex;
@@ -79,7 +79,7 @@
     mask-size: var(--mask-block-width-hover) var(--mask-block-height);
 }
 
-.collage_mask-layer {
+.collage__mask {
     position: absolute;
     inset: 0;
     display: flex;
