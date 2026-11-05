@@ -20,8 +20,7 @@
     background-color: var(--on-background-color);
     display: block;
     width: 90%;
-    padding-bottom: 50%;
-    height: 0;
+    aspect-ratio: 2 / 1;
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
 }
@@ -37,7 +36,6 @@
     font-size: 14px;
     font-weight: 300;
     text-decoration: none;
-    white-space: wrap;
 
     transition: color 0.25s ease,
     background 0.25s ease,

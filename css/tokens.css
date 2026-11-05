@@ -9,12 +9,18 @@
             #e7e5df,
             #252522
     );
+
     --on-background-color: light-dark(
             black,
             white
     );
     --on-card-primary-color: white;
     --on-card-secondary-color: #A9A9A9FF;
+    --card-background-color: color-mix(
+            in oklab,
+            var(--background-color),
+            white 5%
+    );
 
 }
 

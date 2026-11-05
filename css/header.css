@@ -9,7 +9,7 @@
     background-color: var(--frame-color);
     width: var(--header-w);
     height: var(--header-h);
-    inset: var(--frame-w) 0 0 0;
+    inset: var(--frame-w) 0 auto;
     margin-inline: auto;
     box-sizing: border-box;
     align-items: center;

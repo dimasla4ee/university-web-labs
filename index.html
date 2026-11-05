@@ -22,14 +22,6 @@
           rel="stylesheet">
 </head>
 
-<!--
-    TODO:
-        - Карточки через Flexbox:
-            - Автоматический перенос flex-wrap: wrap
-            - Выравнивание по высоте, независимо от объёма текста
--->
-
-
 <body>
 <div class="page">
     <header>
@@ -42,7 +34,7 @@
         </div>
     </header>
 
-    <section class= "hero" id="collage">
+    <section class="hero" id="collage">
         <div class="collage">
             <video autoplay muted loop playsinline class="collage__video">
                 <source src="resources/videos/primetime-trailer.webm" type="video/mp4">
@@ -70,76 +62,175 @@
     </div>
 
     <main class="cards">
-        <section id="section1">
-            <img src="resources/images/you-can-see-everything.webp" alt="" class="card__img">
-            <h1>Увидеть всё</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section1">
+            <div class="card__visual">
+                <img src="resources/images/you-can-see-everything.webp" alt="" class="card__img">
+
+                <h1>Увидеть всё</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Документальный</span>
                 <span class="cards__chip">175 минут</span>
             </span>
-            <hr/>
-            <p>Режиссёры: Нэйтан Филдер, Лэнс Оппенгейм</p>
+
+                <hr/>
+
+                <p>Режиссёры: Нэйтан Филдер, Лэнс Оппенгейм</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    Элизабет Холмс была одной из самых молодых миллиардерш мира, пока её компания не оказалась в центре
+                    крупнейшего мошеннического скандала в истории Кремниевой долины. Потеряв всё своё состояние и
+                    получив тюремный срок, за месяц до заключения она приглашает в свой дом съёмочную группу во главе с
+                    комиком-авангардистом. Но по мере того как границы между правдой и ложью начинают стираться,
+                    камерный портрет загадочной аферистки превращается в головокружительное трёхлетнее путешествие в
+                    бездну.
+                </p>
+            </div>
         </section>
 
-        <section id="section2">
-            <img src="resources/images/misty-green.webp" alt="" class="card__img">
-            <h1>Мисти Грин</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section2">
+            <div class="card__visual">
+                <img src="resources/images/misty-green.webp" alt="" class="card__img">
+
+                <h1>Мисти Грин</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Драма</span>
                 <span class="cards__chip">103 минуты</span>
             </span>
-            <hr/>
-            <p>Режиссёр: Крис Рок</p>
+
+                <hr/>
+
+                <p>Режиссёр: Крис Рок</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    Карьера актрисы Мисти Грин идёт на спад, и уже прошли годы после её прорывной роли в Голливуде.
+                    Мисти не
+                    может найти новые роли и, оказавшись на грани выселения, она пытается вернуть своё место в
+                    киноиндустрии.
+                </p>
+            </div>
         </section>
 
-        <section id="section3">
-            <img src="resources/images/primetime.webp" alt="" class="card__img">
-            <h1>Праймтайм</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section3">
+            <div class="card__visual">
+                <img src="resources/images/primetime.webp" alt="" class="card__img">
+
+                <h1>Праймтайм</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Криминальный триллер</span>
                 <span class="cards__chip">110 минут</span>
             </span>
-            <hr/>
-            <p>Режиссёр: Лэнс Оппенгейм</p>
+
+                <hr/>
+
+                <p>Режиссёр: Лэнс Оппенгейм</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    2006 год. Журналист и телеведущий Крис Хэнсен работает на NBC. Он запускает новое необычное шоу
+                    «Поймать
+                    хищника», в котором разоблачает педофилов, используя актёров в качестве приманки. Программа
+                    пользуется
+                    большим успехом, и глава канала ставит передачу в прайм-тайм. Однако в жизни самого Криса назревают
+                    серьёзные проблемы.
+                </p>
+            </div>
         </section>
 
-        <section id="section4">
-            <img src="resources/images/onslaught.webp" alt="" class="card__img">
-            <h1>Натиск</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section4">
+            <div class="card__visual">
+                <img src="resources/images/onslaught.webp" alt="" class="card__img">
+
+                <h1>Натиск</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Боевик / Хоррор</span>
                 <span class="cards__chip">92 минуты</span>
             </span>
-            <hr/>
-            <p>Режиссёр: Адам Вингард</p>
+
+                <hr/>
+
+                <p>Режиссёр: Адам Вингард</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    Из секретной лаборатории в Нью-Мексико сбегают трое суперсолдат — модифицированные машины для
+                    убийств, не
+                    знающие сострадания. Оставляя за собой кровавый след, они нападают на трейлерный парк, где живёт
+                    бывшая
+                    военная снайпер Селеста с маленькой дочерью. Но эту женщину так легко не возьмёшь.
+                </p>
+            </div>
         </section>
 
-        <section id="section5">
-            <img src="resources/images/backrooms.webp" alt="" class="card__img">
-            <h1>Закулисье реальности</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section5">
+            <div class="card__visual">
+                <img src="resources/images/backrooms.webp" alt="" class="card__img">
+
+                <h1>Закулисье реальности</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Хоррор</span>
                 <span class="cards__chip">110 минут</span>
             </span>
-            <hr/>
-            <p>Режиссёр: Кейн Парсонс</p>
+
+                <hr/>
+
+                <p>Режиссёр: Кейн Парсонс</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    Кларк, одинокий владелец мебельного магазина, никак не может оправиться после развода и посещает
+                    психолога. Он ночует на работе и однажды обнаруживает проход в другое измерение. Так Кларк
+                    оказывается в
+                    бесконечном лабиринте жёлтых комнат и коридоров, где пространство живёт по своей логике, а нечто
+                    жуткое
+                    может скрываться за каждым углом.
+                </p>
+            </div>
         </section>
 
-        <section id="section6">
-            <img src="resources/images/mother-mary.webp" alt="" class="card__img">
-            <h1>Мать Мария</h1>
-            <span class="cards__chip-container">
+        <section class="card" id="section6">
+            <div class="card__visual">
+                <img src="resources/images/mother-mary.webp" alt="" class="card__img">
+
+                <h1>Мать Мария</h1>
+
+                <span class="cards__chip-container">
                 <span class="cards__chip">2026</span>
                 <span class="cards__chip">Драма / Триллер</span>
                 <span class="cards__chip">110 минут</span>
             </span>
-            <hr/>
-            <p>Режиссёр: Дэвид Лоури</p>
+
+                <hr/>
+
+                <p>Режиссёр: Дэвид Лоури</p>
+            </div>
+
+            <div class="card__description">
+                <p>
+                    Поп-звезда Мать Мария готовится к возвращению на сцену после жуткого происшествия и 10-летнего
+                    отсутствия. Её совершенно не устраивает созданное для концерта платье, поэтому она без
+                    предупреждения
+                    заявляется к своей бывшей подруге и соратнице Сэм, ставшей успешным модным дизайнером, чтобы та
+                    сделала
+                    ей концертный наряд. Женщинам есть что вспомнить и обсудить.
+                </p>
+            </div>
         </section>
     </main>
 </div>
