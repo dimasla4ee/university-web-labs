@@ -77,3 +77,16 @@
     writing-mode: vertical-rl;
     white-space: nowrap;
 }
+
+.info__block {
+    grid-area: info;
+    font-family: var(--font-display), serif;
+    font-size: var(--fs-lg);
+    color: var(--on-background-color);
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    color: var(--frame-color);
+}
