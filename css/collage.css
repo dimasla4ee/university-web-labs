@@ -7,6 +7,7 @@
     position: relative;
     aspect-ratio: 16 / 9;
     transform: translateY(-40px);
+    container-type: inline-size;
 }
 
 .collage__video {
@@ -70,7 +71,7 @@
     align-items: center;
     font-weight: var(--fw-regular);
     font-family: var(--font-display), serif;
-    font-size: var(--fs-hero);
+    font-size: clamp(16px, 6cqw, var(--fs-hero));
 }
 
 .rotated-text {
