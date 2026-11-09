@@ -1,4 +1,16 @@
 :root {
+    color-scheme: light dark;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark dark;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light light;
+}
+
+:root {
     --frame-w: 12px;
     --frame-z: 1000;
     --card-content-z: 100;
