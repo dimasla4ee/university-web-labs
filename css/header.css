@@ -72,13 +72,34 @@
 .header__link--inactive {
     font-weight: var(--fw-light);
     display: none;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 220ms ease,
+    transform 220ms ease,
+    display 0s 220ms allow-discrete;
 }
 
 .header__notch:hover .header__link--inactive {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 220ms ease 140ms,
+    transform 220ms ease 140ms,
+    display 0s 0s allow-discrete;
+}
+
+@starting-style {
+    .header__notch:hover .header__link--inactive {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
 }
 
 header a {
     font-family: var(--font-body), sans-serif;
     color: var(--on-frame-color);
+}
+
+.header__notch:hover .header__link--active {
+    text-shadow: 0 0 20px var(--on-frame-color);
 }
