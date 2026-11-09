@@ -1,0 +1,62 @@
+.theme-switcher {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 6px;
+    padding: 4px;
+    background-color: light-dark(#f0f0f0, #1e1e1e);
+    border: 1px solid light-dark(#cccccc, #333333);
+    border-radius: 8px;
+}
+
+.theme-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font: inherit;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.theme-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--on-background-color);
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.theme-btn:not(:disabled):hover {
+    background-color: light-dark(#e4e4e4, #2a2a2a);
+}
+
+.theme-btn[disabled],
+.theme-btn[aria-pressed="true"] {
+    background-color: light-dark(#dcdcdc, #333333);
+    border-color: light-dark(#b0b0b0, #555555);
+    cursor: default;
+    opacity: 1;
+}
+
+body,
+.sidebar,
+.sidebar__nav .logo,
+.sidebar__link,
+.theme-switcher,
+.theme-btn,
+.theme-icon,
+button,
+a {
+    transition:
+            background-color 0.35s ease,
+            color 0.35s ease,
+            border-color 0.35s ease;
+}

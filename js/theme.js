@@ -1,8 +1,5 @@
 const root = document.documentElement;
-const button = document.getElementById('theme-toggle');
-const themes = ['system', 'light', 'dark'];
-
-let theme = localStorage.getItem('theme') || 'system';
+const buttons = document.querySelectorAll('.theme-btn');
 
 function apply(theme) {
     if (theme === 'system') {
@@ -10,13 +7,21 @@ function apply(theme) {
     } else {
         root.setAttribute('data-theme', theme);
     }
-    button.textContent = `Theme: ${theme}`;
+
+    buttons.forEach((btn) => {
+        const isActive = btn.dataset.theme === theme;
+        btn.disabled = isActive;
+        btn.setAttribute('aria-pressed', String(isActive));
+    });
+
     localStorage.setItem('theme', theme);
 }
 
-apply(theme);
+apply(localStorage.getItem('theme') || 'system');
 
-button.addEventListener('click', () => {
-    theme = themes[(themes.indexOf(theme) + 1) % themes.length];
-    apply(theme);
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        apply(btn.dataset.theme);
+    });
 });
