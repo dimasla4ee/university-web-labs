@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Контакты | Коллекция фильмов A24</title>
+
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/collage.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/theme-switcher.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+          rel="stylesheet">
+
+    <script defer src="../js/theme.js"></script>
 </head>
+
 <body>
+<header>
+    <div class="header__notch">
+        <nav class="header__nav">
+            <a href="../index.html" class="header__link--inactive">Главная</a>
+            <a href="../html/about.html" class="header__link--inactive">О нас</a>
+            <a class="header__link--active" aria-current="page">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<div class="theme-switcher" role="group" aria-label="Theme" style="margin: 40px 0 20px 0">
+    <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');"
+                          aria-hidden="true"></span>
+    </button>
+    <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');"
+                          aria-hidden="true"></span>
+    </button>
+    <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');"
+                          aria-hidden="true"></span>
+    </button>
+</div>
+
+<footer class="footer">
+    <nav class="footer__nav">
+        <a href="../index.html" class="footer__link">Главная</a>
+        <a href="../html/about.html" class="footer__link">О нас</a>
+        <a class="footer__link footer__link--active">Контакты</a>
+        <a href="https://a24films.com" class="footer__link" target="_blank">
+            Официальный сайт A24 ↗
+        </a>
+    </nav>
+
+    <div class="footer__bottom">
+        <span>© 2026 Film Collection</span>
+        <span>Учебный проект</span>
+    </div>
+</footer>
 
 </body>
+
 </html>
