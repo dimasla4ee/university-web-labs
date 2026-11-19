@@ -1,11 +1,10 @@
 .sidebar {
     position: sticky;
-    top: 20px;
     width: 100%;
+    top: 52px;
     min-width: 120px;
     height: auto;
-    padding: 0 12px;
-    margin-top: 30svh;
+    padding: 0 8px;
     grid-area: sidebar;
     align-self: start;
 }
@@ -19,7 +18,7 @@
 .sidebar__nav .logo {
     background-color: var(--on-background-color);
     display: block;
-    width: 90%;
+    width: 100%;
     aspect-ratio: 2 / 1;
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
@@ -65,4 +64,18 @@
 
 .sidebar__link:hover::before {
     transform: translateY(-50%) scaleY(1);
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky;
+        top: calc(20px + 36px);
+        width: 100%;
+        min-width: 120px;
+        height: auto;
+        padding: 0 12px;
+        margin-top: 30svh;
+        grid-area: sidebar;
+        align-self: start;
+    }
 }

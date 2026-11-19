@@ -3,6 +3,7 @@
     width: 100%;
     box-sizing: border-box;
     gap: 6px;
+    margin-top: 8px;
     padding: 4px;
     background-color: light-dark(#f0f0f0, #1e1e1e);
     border: 1px solid light-dark(#cccccc, #333333);
@@ -26,9 +27,11 @@
 }
 
 .theme-icon {
+    --icon-size: 16px;
+
     display: block;
-    width: 24px;
-    height: 24px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     background-color: var(--on-background-color);
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
@@ -55,8 +58,20 @@ body,
 .theme-icon,
 button,
 a {
-    transition:
-            background-color 0.35s ease,
-            color 0.35s ease,
-            border-color 0.35s ease;
+    transition: background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+@media (min-width: 768px) {
+    .theme-icon {
+        --icon-size: 24px;
+
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: var(--on-background-color);
+        -webkit-mask: var(--icon) center / contain no-repeat;
+        mask: var(--icon) center / contain no-repeat;
+    }
 }

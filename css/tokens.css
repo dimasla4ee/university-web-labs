@@ -43,8 +43,8 @@
     --fs-xs: 12px;
     --fs-sm: 14px;
     --fs-md: 16px;
-    --fs-lg: 24px;
-    --fs-hero: 60px;
+    --fs-lg: clamp(14px, 6cqw, 24px);
+    --fs-hero: clamp(16px, 6cqw, 60px);
 
     --fw-thin: 200;
     --fw-light: 300;

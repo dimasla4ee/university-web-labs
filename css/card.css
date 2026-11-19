@@ -94,9 +94,6 @@
 
 .cards__chip {
     color: var(--on-card-primary-color);
-    border: 1px solid var(--on-card-secondary-color);
-    border-radius: 25px;
-    padding: 4px 8px;
     font-size: var(--fs-md);
     font-weight: var(--fw-thin);
     font-family: var(--font-body), sans-serif;
@@ -110,4 +107,17 @@
     border: 0;
     background-color: var(--on-card-secondary-color);
     padding: 0;
+}
+
+@media (min-width: 768px) {
+    .cards__chip {
+        color: var(--on-card-primary-color);
+        border: 1px solid var(--on-card-secondary-color);
+        border-radius: 25px;
+        padding: 4px 8px;
+        font-size: var(--fs-md);
+        font-weight: var(--fw-thin);
+        font-family: var(--font-body), sans-serif;
+        white-space: nowrap;
+    }
 }

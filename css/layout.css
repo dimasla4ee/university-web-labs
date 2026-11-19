@@ -1,17 +1,18 @@
 .page {
-    --horizontal-padding: calc(100svw / 6.5);
+    --horizontal-padding: calc(100svh / 6.5);
 
     display: grid;
-    grid-template-columns: var(--horizontal-padding) 1fr var(--horizontal-padding);
+    grid-template-columns: var(--horizontal-padding) 1fr;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
-    "header header header"
-    "sidebar hero hero"
-    "sidebar info aside"
-    "sidebar cards aside"
-    "footer footer footer";
+    "header header"
+    "hero hero"
+    "sidebar info"
+    "sidebar cards"
+    "footer footer";
     gap: 24px;
     min-height: 100vh;
+    column-gap: 40px;
 }
 
 header {
@@ -20,14 +21,41 @@ header {
 
 .hero {
     grid-area: hero;
-    min-height: 100svh;
     display: flex;
+    min-height: auto;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    animation: collage-collapse linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 500px;
+}
+
+@media (min-width: 1024px) {
+    .page {
+        --horizontal-padding: calc(100svw / 6.5);
+
+        display: grid;
+        grid-template-columns: var(--horizontal-padding) 1fr var(--horizontal-padding);
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+    "header header header"
+    "sidebar hero hero"
+    "sidebar info aside"
+    "sidebar cards aside"
+    "footer footer footer";
+        gap: 24px;
+        min-height: 100vh;
+    }
+
+    .hero {
+        grid-area: hero;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        animation: collage-collapse linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 500px;
+    }
 }
 
 @keyframes collage-collapse {

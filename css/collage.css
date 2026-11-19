@@ -4,6 +4,8 @@
     --mask-block-height: 90%;
     --mask-block-width-hover: 14%;
 
+    top: 60px;
+    margin-bottom: 20px;
     position: relative;
     aspect-ratio: 16 / 9;
     transform: translateY(-40px);
@@ -71,7 +73,7 @@
     align-items: center;
     font-weight: var(--fw-regular);
     font-family: var(--font-display), serif;
-    font-size: clamp(16px, 6cqw, var(--fs-hero));
+    font-size: var(--fs-hero);
 }
 
 .rotated-text {
