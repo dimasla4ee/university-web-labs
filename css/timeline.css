@@ -1,0 +1,22 @@
+.timeline__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.timeline-stamp {
+    display: flex;
+    flex-direction: column;
+    border-left: blue 1px solid;
+    gap: 16px;
+    padding: 8px;
+    width: 60svw;
+    flex-shrink: 0;
+    align-items: flex-start;
+}
+
+.timeline-stamp .rotated-text {
+    font-size:80px;
+    line-height: 40px;
+}
