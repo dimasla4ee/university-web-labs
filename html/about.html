@@ -21,11 +21,16 @@
           rel="stylesheet">
 
     <script defer src="../js/theme.js"></script>
+    <script defer src="../js/notch-interaction.js"></script>
 </head>
 
 <body>
 <header>
-    <div class="header__notch">
+    <div class="header__notch"
+         role="button"
+         tabindex="0"
+         aria-expanded="false"
+         aria-label="Переключить меню">
         <nav class="header__nav">
             <a href="../index.html" class="header__link--inactive">Главная</a>
             <a class="header__link--active" aria-current="page">О нас</a>

@@ -3,8 +3,6 @@
 
 <!--
     TODO:
-        - Добавить отступ сверху при скролле по секциям
-        - Изменить интеракцию с Notch на мобильных устройствах
         - Починить footer при скролле на мобильных устройствах
         - Адаптировать карточки под мобильные устройства
 -->
@@ -32,12 +30,17 @@
           rel="stylesheet">
 
     <script defer src="js/theme.js"></script>
+    <script defer src="js/notch-interaction.js"></script>
 </head>
 
 <body>
 <div class="page">
     <header>
-        <div class="header__notch">
+        <div class="header__notch"
+             role="button"
+             tabindex="0"
+             aria-expanded="false"
+             aria-label="Переключить меню">
             <nav class="header__nav">
                 <a class="header__link--active" aria-current="page">Главная</a>
                 <a href="html/about.html" class="header__link--inactive">О нас</a>

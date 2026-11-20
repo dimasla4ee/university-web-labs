@@ -2,54 +2,60 @@
     --top-notch-radius: 8px;
     --notch-radius: 12px;
     --columns: 1;
-    --header-w: 180px;
+    --header-w: clamp(130px, 40vw, 180px);
     --header-h: 36px;
 
     position: fixed;
-    background-color: var(--frame-color);
-    width: var(--header-w);
-    height: var(--header-h);
     inset: var(--frame-w) 0 auto;
     margin-inline: auto;
+    width: var(--header-w);
+    height: var(--header-h);
+    background-color: var(--frame-color);
+    border-radius: 0 0 var(--notch-radius) var(--notch-radius);
     box-sizing: border-box;
     align-items: center;
-    border-radius: 0 0 var(--notch-radius) var(--notch-radius);
     isolation: isolate;
     z-index: var(--frame-z);
+    cursor: pointer;
 
-    transition: width 500ms ease,
-    height 500ms ease;
-}
+    transition: width 500ms ease, height 500ms ease;
 
-.header__notch:hover {
-    --top-notch-radius: 14px;
-    --notch-radius: 20px;
-    --columns: 3;
-    --header-w: 600px;
-    --header-h: 120px;
+    @media (hover: hover) {
+        &:hover {
+            --is-open: 1;
+        }
+    }
 
-    box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
-    transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
-}
+    &:where(:hover, [aria-expanded="true"], .is-open) {
+        --top-notch-radius: 14px;
+        --notch-radius: 20px;
+        --columns: 3;
+        --header-w: clamp(300px, 90vw, 600px);
+        --header-h: 120px;
 
-.header__notch::before,
-.header__notch::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: var(--header-h);
-    width: var(--top-notch-radius);
-    box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 var(--frame-color);
-}
+        box-shadow: 0 0 10px 2px rgb(0 0 0 / 0.55);
+        transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
 
-.header__notch::before {
-    left: calc(-1 * var(--top-notch-radius));
-    border-top-right-radius: var(--top-notch-radius);
-}
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: var(--header-h);
+        width: var(--top-notch-radius);
+        box-shadow: 0 calc(-1 * var(--top-notch-radius)) 0 0 var(--frame-color);
+    }
 
-.header__notch::after {
-    right: calc(-1 * var(--top-notch-radius));
-    border-top-left-radius: var(--top-notch-radius);
+    &::before {
+        left: calc(-1 * var(--top-notch-radius));
+        border-top-right-radius: var(--top-notch-radius);
+    }
+
+    &::after {
+        right: calc(-1 * var(--top-notch-radius));
+        border-top-left-radius: var(--top-notch-radius);
+    }
 }
 
 .header__nav {
@@ -59,7 +65,9 @@
     align-items: center;
 }
 
-.header__nav a {
+header a {
+    font-family: var(--font-body), sans-serif;
+    color: var(--on-frame-color);
     text-decoration: none;
     text-align: center;
     margin: 4px;
@@ -69,37 +77,34 @@
     font-weight: var(--fw-regular);
 }
 
+.header__notch:where(:hover, [aria-expanded="true"]) .header__link--active {
+    text-shadow: 0 0 20px var(--on-frame-color);
+}
+
 .header__link--inactive {
     font-weight: var(--fw-light);
     display: none;
     opacity: 0;
     transform: translateY(-4px);
+    pointer-events: none;
     transition: opacity 220ms ease,
     transform 220ms ease,
     display 0s 220ms allow-discrete;
 }
 
-.header__notch:hover .header__link--inactive {
+.header__notch:where(:hover, [aria-expanded="true"]) .header__link--inactive {
     display: block;
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
     transition: opacity 220ms ease 140ms,
     transform 220ms ease 140ms,
     display 0s 0s allow-discrete;
 }
 
 @starting-style {
-    .header__notch:hover .header__link--inactive {
+    .header__notch:where(:hover, [aria-expanded="true"]) .header__link--inactive {
         opacity: 0;
         transform: translateY(-4px);
     }
-}
-
-header a {
-    font-family: var(--font-body), sans-serif;
-    color: var(--on-frame-color);
-}
-
-.header__notch:hover .header__link--active {
-    text-shadow: 0 0 20px var(--on-frame-color);
 }
