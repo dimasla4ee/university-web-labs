@@ -2,11 +2,14 @@
     position: sticky;
     width: 100%;
     top: 52px;
-    min-width: 120px;
     height: auto;
-    padding: 0 8px;
     grid-area: sidebar;
     align-self: start;
+
+    @media (min-width: 1024px) {
+        padding: 0 12px;
+        margin-top: 30vh;
+    }
 }
 
 .sidebar__nav {
@@ -25,57 +28,46 @@
 }
 
 .sidebar__link {
+    --link-padding: 6px 8px;
+
     position: relative;
     display: block;
-    padding: 8px 14px;
+    padding: var(--link-padding);
     border-radius: 10px;
-
-    color: rgb(from var(--on-background-color) r g b / 60%);
-    font-family: "Literata", serif;
-    font-size: 14px;
-    font-weight: 300;
+    color: color-mix(in srgb, var(--on-background-color) 60%, transparent);
+    font-family: var(--font-display), serif;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
     text-decoration: none;
-
     transition: color 0.25s ease,
-    background 0.25s ease,
+    background-color 0.25s ease,
     padding-left 0.25s ease;
-}
 
-.sidebar__link:hover {
-    color: var(--on-background-color);
-    background: rgb(from var(--on-background-color) r g b / 7%);
-    padding-left: 18px;
-}
+    @media (min-width: 1024px) {
+        --link-padding: 8px 14px;
+    }
 
-.sidebar__link::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) scaleY(0);
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) scaleY(0);
+        width: 3px;
+        height: 60%;
+        border-radius: 0 3px 3px 0;
+        background: var(--on-background-color);
+        transition: transform 0.25s ease;
+    }
 
-    width: 3px;
-    height: 60%;
-    border-radius: 0 3px 3px 0;
-    background: var(--on-background-color);
+    &:hover,
+    &:focus-visible {
+        color: var(--on-background-color);
+        background: rgb(from var(--on-background-color) r g b / 7%);
+        padding-left: 18px;
 
-    transition: transform 0.25s ease;
-}
-
-.sidebar__link:hover::before {
-    transform: translateY(-50%) scaleY(1);
-}
-
-@media (min-width: 768px) {
-    .sidebar {
-        position: sticky;
-        top: calc(20px + 36px);
-        width: 100%;
-        min-width: 120px;
-        height: auto;
-        padding: 0 12px;
-        margin-top: 30svh;
-        grid-area: sidebar;
-        align-self: start;
+        &::before {
+            transform: translateY(-50%) scaleY(1);
+        }
     }
 }
