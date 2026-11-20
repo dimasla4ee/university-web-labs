@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 14px;
+    gap: clamp(4px, 1.5vw, 14px);
     aspect-ratio: 10 / 16;
     overflow: hidden;
     border-radius: 12px;
@@ -87,13 +87,20 @@
 }
 
 .cards__chip-container {
-    display: flex;
+    display: none;
     gap: 8px;
     flex-wrap: wrap;
+
+    @media (min-width: 440px) {
+        display: flex;
+    }
 }
 
 .cards__chip {
     color: var(--on-frame-color);
+    border: 1px solid var(--text-muted);
+    border-radius: 25px;
+    padding: 4px 8px;
     font-size: var(--fs-md);
     font-weight: var(--fw-thin);
     font-family: var(--font-body), sans-serif;
@@ -107,17 +114,4 @@
     border: 0;
     background-color: var(--text-muted);
     padding: 0;
-}
-
-@media (min-width: 768px) {
-    .cards__chip {
-        color: var(--on-frame-color);
-        border: 1px solid var(--text-muted);
-        border-radius: 25px;
-        padding: 4px 8px;
-        font-size: var(--fs-md);
-        font-weight: var(--fw-thin);
-        font-family: var(--font-body), sans-serif;
-        white-space: nowrap;
-    }
 }
