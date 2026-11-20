@@ -85,7 +85,7 @@
     grid-area: info;
     font-family: var(--font-display), serif;
     font-size: var(--fs-lg);
-    color: var(--on-background-color);
+    color: var(--text-main);
 }
 
 footer {

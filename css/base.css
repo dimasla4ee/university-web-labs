@@ -5,5 +5,11 @@ html {
 
 body {
     padding: var(--frame-w);
-    background-color: var(--background-color);
+    background-color: var(--bg-main);
+    transition: var(--transition-theme);
+}
+
+button,
+a {
+    transition: var(--transition-theme);
 }

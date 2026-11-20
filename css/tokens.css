@@ -13,27 +13,24 @@
 :root {
     --frame-w: 12px;
     --frame-z: 1000;
-    --card-content-z: 100;
+    --card-z: 100;
 
-    --frame-color: black;
-    --on-frame-color: white;
-    --background-color: light-dark(
-            #e7e5df,
-            #252522
-    );
+    --frame-color: #000000;
+    --on-frame-color: #ffffff;
 
-    --on-background-color: light-dark(
-            black,
-            white
-    );
-    --on-card-primary-color: white;
-    --on-card-secondary-color: #A9A9A9FF;
-    --card-background-color: color-mix(
-            in oklab,
-            var(--background-color),
-            white 5%
-    );
+    --bg-main: light-dark(#e7e5df, #252522);
+    --bg-surface: color-mix(in oklab, var(--bg-main), #ffffff 5%);
+    --bg-control: light-dark(#f0f0f0, #1e1e1e);
 
+    --text-main: light-dark(#000000, #ffffff);
+    --text-muted: #a9a9a9;
+
+    --border-subtle: light-dark(#cccccc, #333333);
+    --border-strong: light-dark(#b0b0b0, #555555);
+
+    --transition-theme: background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
 }
 
 :root {

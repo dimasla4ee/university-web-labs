@@ -4,7 +4,7 @@
     flex: 1 1 240px;
     min-width: 0;
     box-shadow: 0 4px 6px 1px rgb(0 0 0 / 0.3);
-    background-color: var(--card-background-color);
+    background-color: var(--bg-surface);
     padding: 12px;
     border-radius: 12px;
 }
@@ -24,7 +24,7 @@
 .card__description {
     flex: 1;
     padding: 12px 4px 0;
-    color: var(--on-background-color);
+    color: var(--text-main);
 }
 
 .cards {
@@ -60,12 +60,12 @@
 .cards__chip-container,
 .cards section hr {
     position: relative;
-    z-index: var(--card-content-z);
+    z-index: var(--card-z);
     margin: 0;
 }
 
 .cards section h1 {
-    color: var(--on-card-primary-color);
+    color: var(--on-frame-color);
     font-size: var(--fs-lg);
     font-weight: var(--fw-light);
     font-family: var(--font-display), serif;
@@ -79,11 +79,11 @@
 }
 
 .card__visual p {
-    color: var(--on-card-secondary-color);
+    color: var(--text-muted);
 }
 
 .card__description p {
-    color: var(--on-background-color);
+    color: var(--text-main);
 }
 
 .cards__chip-container {
@@ -93,7 +93,7 @@
 }
 
 .cards__chip {
-    color: var(--on-card-primary-color);
+    color: var(--on-frame-color);
     font-size: var(--fs-md);
     font-weight: var(--fw-thin);
     font-family: var(--font-body), sans-serif;
@@ -105,14 +105,14 @@
     display: block;
     height: 1px;
     border: 0;
-    background-color: var(--on-card-secondary-color);
+    background-color: var(--text-muted);
     padding: 0;
 }
 
 @media (min-width: 768px) {
     .cards__chip {
-        color: var(--on-card-primary-color);
-        border: 1px solid var(--on-card-secondary-color);
+        color: var(--on-frame-color);
+        border: 1px solid var(--text-muted);
         border-radius: 25px;
         padding: 4px 8px;
         font-size: var(--fs-md);
