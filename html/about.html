@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/frame.css">
-    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/timeline.css">
     <link rel="stylesheet" href="../css/theme-switcher.css">
     <link rel="stylesheet" href="../css/footer.css">
 
@@ -24,7 +24,7 @@
     <script defer src="../js/notch-interaction.js"></script>
 </head>
 
-<body>
+<body class="about-page">
 <header>
     <div class="header__notch"
          role="button"
@@ -39,53 +39,71 @@
     </div>
 </header>
 
-<div class="theme-switcher" role="group" aria-label="Theme" style="margin: 40px 0 20px 0">
-    <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
-                    <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');"
-                          aria-hidden="true"></span>
-    </button>
-    <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
-                    <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');"
-                          aria-hidden="true"></span>
-    </button>
-    <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
-                    <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');"
-                          aria-hidden="true"></span>
-    </button>
-</div>
+<main class="timeline-section">
+    <div class="timeline__container">
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2003</span>
+            <p class="timeline-stamp__text">
+                Основание компании «Aurora Cinema». Изначально фокус направлен на независимый кинематограф и европейские
+                артхаусные ленты, которые крупные студии игнорируют.
+            </p>
+        </article>
 
-<div class="timeline__container">
-    <div class="timeline-stamp">
-        <div class="rotated-text">2003</div>
-        Основание компании «Aurora Cinema». Изначально фокус направлен на независимый кинематограф и европейские
-        артхаусные ленты, которые крупные студии игнорируют.
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2007</span>
+            <p class="timeline-stamp__text">
+                «Aurora Cinema» налаживает стратегическое партнерство с крупными международными фестивалями (например, Канн и
+                Венеция) для гарантированного продвижения своих лент.
+            </p>
+        </article>
+
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2011</span>
+            <p class="timeline-stamp__text">
+                Открытие регионального офиса в Латинской Америке. Компания начинает активно дистрибутировать локальные фильмы в
+                этом регионе.
+            </p>
+        </article>
+
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2014</span>
+            <p class="timeline-stamp__text">
+                Активная адаптация бизнес-процессов к растущему рынку Video On Demand. Компания начинает работать с ключевыми
+                онлайн-кинотеатрами и платформами.
+            </p>
+        </article>
+
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2023</span>
+            <p class="timeline-stamp__text">
+                Подписание крупного многолетнего контракта с крупнейшей мировой стриминговой платформой, став одной из ключевых
+                агрегаторов контента в Европе и Азии.
+            </p>
+        </article>
+
+        <article class="timeline-stamp">
+            <span class="timeline-stamp__year">2024</span>
+            <p class="timeline-stamp__text">
+                Создание внутреннего подразделения «Aurora Labs», которое занимается не только дистрибуцией, но и
+                пре-продакшном: помогают независимым режиссерам находить финансирование, основываясь на аналитике рынка.
+            </p>
+        </article>
     </div>
-    <div class="timeline-stamp">
-        <div class="rotated-text">2007</div>
-        «Aurora Cinema» налаживает стратегическое партнерство с крупными международными фестивалями (например, Канн и
-        Венеция) для гарантированного продвижения своих лент.
+
+    <div class="theme-switcher-wrapper">
+        <div class="theme-switcher" role="group" aria-label="Theme">
+            <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
+                <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');" aria-hidden="true"></span>
+            </button>
+            <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
+                <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');" aria-hidden="true"></span>
+            </button>
+            <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
+                <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');" aria-hidden="true"></span>
+            </button>
+        </div>
     </div>
-    <div class="timeline-stamp">
-        <div class="rotated-text">2011</div>
-        Открытие регионального офиса в Латинской Америке. Компания начинает активно дистрибутировать локальные фильмы в
-        этом регионе.
-    </div>
-    <div class="timeline-stamp">
-        <div class="rotated-text">2014</div>
-        Активная адаптация бизнес-процессов к растущему рынку Video On Demand. Компания начинает работать с ключевыми
-        онлайн-кинотеатрами и платформами.
-    </div>
-    <div class="timeline-stamp">
-        <div class="rotated-text">2023</div>
-        Подписание крупного многолетнего контракта с крупнейшей мировой стриминговой платформой, став одной из ключевых
-        агрегаторов контента в Европе и Азии.
-    </div>
-    <div class="timeline-stamp">
-        <div class="rotated-text">2024</div>
-        Создание внутреннего подразделения «Aurora Labs», которое занимается не только дистрибуцией, но и
-        пре-продакшном: помогают независимым режиссерам находить финнансирование, основываясь на аналитике рынка.
-    </div>
-</div>
+</main>
 
 <footer class="footer">
     <nav class="footer__nav">
@@ -96,7 +114,6 @@
             Официальный сайт A24 ↗
         </a>
     </nav>
-
     <div class="footer__bottom">
         <span>© 2026 Film Collection</span>
         <span>Учебный проект</span>
