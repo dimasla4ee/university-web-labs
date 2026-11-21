@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/frame.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/timeline.css">
     <link rel="stylesheet" href="../css/theme-switcher.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -24,7 +26,7 @@
     <script defer src="../js/notch-interaction.js"></script>
 </head>
 
-<body class="about-page">
+<body class="page">
 <header>
     <div class="header__notch"
          role="button"
@@ -39,9 +41,38 @@
     </div>
 </header>
 
+<div class="sidebar">
+    <nav class="sidebar__nav">
+        <span class="logo" style="--icon: url('/resources/images/a24_logo.svg');" aria-hidden="true"></span>
+
+        <div class="theme-switcher" role="group" aria-label="Theme">
+            <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');"
+                          aria-hidden="true"></span>
+            </button>
+            <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');"
+                          aria-hidden="true"></span>
+            </button>
+            <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
+                    <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');"
+                          aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <a href="#section1" class="sidebar__link">2012</a>
+        <a href="#section2" class="sidebar__link">2013</a>
+        <a href="#section3" class="sidebar__link">2015</a>
+        <a href="#section4" class="sidebar__link">2016</a>
+        <a href="#section5" class="sidebar__link">2017</a>
+        <a href="#section6" class="sidebar__link">2019</a>
+        <a href="#section7" class="sidebar__link">2023</a>
+    </nav>
+</div>
+
 <main class="timeline-section">
     <div class="timeline__container">
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section1">
             <span class="timeline-stamp__year">2012</span>
             <p class="timeline-stamp__text">
                 Дэниел Кац, Дэвид Фенкел и Джон Ходжес основывают A24 в Нью-Йорке как независимого дистрибьютора,
@@ -49,7 +80,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section2">
             <span class="timeline-stamp__year">2013</span>
             <p class="timeline-stamp__text">
                 Выходят первые театральные релизы, включая «Отвязные каникулы» (Spring Breakers), который становится
@@ -57,7 +88,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section3">
             <span class="timeline-stamp__year">2015</span>
             <p class="timeline-stamp__text">
                 A24 объявляет о запуске телевизионного подразделения и начинает производство сериалов, в частности
@@ -66,7 +97,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section4">
             <span class="timeline-stamp__year">2016</span>
             <p class="timeline-stamp__text">
                 Студия впервые выступает в роли продюсера: совместно с Plan B Entertainment выходит «Лунный свет»
@@ -74,7 +105,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section5">
             <span class="timeline-stamp__year">2017</span>
             <p class="timeline-stamp__text">
                 «Лунный свет» получает «Оскар» за лучший фильм, принося A24 первую в истории студии победу в главной
@@ -82,7 +113,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section6">
             <span class="timeline-stamp__year">2019</span>
             <p class="timeline-stamp__text">
                 A24 запускает собственный книжный импринт, выпуская первые книги, посвященные «Лунному свету», «Ведьме»
@@ -91,7 +122,7 @@
             </p>
         </article>
 
-        <article class="timeline-stamp">
+        <article class="timeline-stamp" id="section7">
             <span class="timeline-stamp__year">2023</span>
             <p class="timeline-stamp__text">
                 На 95-й церемонии «Оскар» A24 становится первой независимой студией, которая за один вечер собирает все
@@ -99,23 +130,6 @@
                 сразу» (Everything Everywhere All at Once).
             </p>
         </article>
-    </div>
-
-    <div class="theme-switcher-wrapper">
-        <div class="theme-switcher" role="group" aria-label="Theme">
-            <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
-                <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');"
-                      aria-hidden="true"></span>
-            </button>
-            <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
-                <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');"
-                      aria-hidden="true"></span>
-            </button>
-            <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
-                <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');"
-                      aria-hidden="true"></span>
-            </button>
-        </div>
     </div>
 </main>
 

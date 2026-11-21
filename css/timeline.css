@@ -13,6 +13,7 @@
     padding-top: calc(var(--frame-w) + 60px);
     padding-bottom: 20px;
     box-sizing: border-box;
+    grid-area: cards;
 }
 
 .timeline__container {
