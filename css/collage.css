@@ -87,9 +87,3 @@
     font-size: var(--fs-lg);
     color: var(--text-main);
 }
-
-footer {
-    grid-area: footer;
-    width: 100%;
-    color: var(--frame-color);
-}
