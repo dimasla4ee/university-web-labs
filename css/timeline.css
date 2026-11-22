@@ -70,7 +70,3 @@
     color: var(--text-main);
     opacity: 0.85;
 }
-
-.page--about .footer {
-    margin-top: 0;
-}

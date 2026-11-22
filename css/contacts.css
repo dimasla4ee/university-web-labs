@@ -1,0 +1,185 @@
+.contacts {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 40px;
+}
+
+.contacts__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    scroll-margin-top: 80px;
+}
+
+.contacts__title {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-regular);
+    color: var(--text-main);
+    margin: 0;
+}
+
+.contacts__cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.contact-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: clamp(14px, 3vw, 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    box-sizing: border-box;
+    transition: var(--transition-theme), transform 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        border-color: var(--border-strong);
+        transform: translateY(-2px);
+    }
+}
+
+.contact-card__link {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--text-main);
+    text-decoration: none;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.6;
+        text-decoration: underline;
+    }
+}
+
+.contact-card__tag {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.contact-card__heading {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: 20px;
+    font-weight: var(--fw-regular);
+    margin: 0;
+    color: var(--text-main);
+}
+
+.contact-card__address {
+    font-style: normal;
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    color: var(--text-main);
+    opacity: 0.85;
+}
+
+.contact-card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.contacts__map-wrapper {
+    position: relative;
+    width: 100%;
+    height: clamp(280px, 45vh, 440px);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-surface);
+}
+
+.contacts__map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(80%) contrast(1.1);
+    transition: filter 0.3s ease;
+
+    &:hover {
+        filter: grayscale(0%) contrast(1);
+    }
+}
+
+.contacts__map-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    max-width: fit-content;
+    background-color: var(--bg-surface);
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-xs);
+    color: var(--text-main);
+}
+
+.contacts__departments {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.department-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-subtle);
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.department-row__info h3 {
+    margin: 0 0 4px 0;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-regular);
+    color: var(--text-main);
+}
+
+.department-row__info p {
+    margin: 0;
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.department-row__mail {
+    font-family: var(--font-body), sans-serif;
+    font-size: var(--fs-sm);
+    color: var(--text-main);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Контакты | Коллекция фильмов A24</title>
 
     <link rel="stylesheet" href="../css/tokens.css">
@@ -12,10 +11,9 @@
     <link rel="stylesheet" href="../css/frame.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/collage.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/theme-switcher.css">
-    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/contacts.css">
     <link rel="stylesheet" href="../css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +25,7 @@
     <script defer src="../js/notch-interaction.js"></script>
 </head>
 
-<body>
+<body class="page">
 <header>
     <div class="header__notch"
          role="button"
@@ -42,20 +40,111 @@
     </div>
 </header>
 
-<div class="theme-switcher" role="group" aria-label="Theme" style="margin: 40px 0 20px 0">
-    <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
+<div class="sidebar sidebar--contacts">
+    <nav class="sidebar__nav">
+        <span class="logo" style="--icon: url('/resources/images/a24_logo.svg');" aria-hidden="true"></span>
+
+        <div class="theme-switcher" role="group" aria-label="Theme">
+            <button class="theme-btn" type="button" data-theme="system" aria-label="System theme">
                     <span class="theme-icon" style="--icon: url('/resources/icons/monitor_24dp.svg');"
                           aria-hidden="true"></span>
-    </button>
-    <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
+            </button>
+            <button class="theme-btn" type="button" data-theme="light" aria-label="Light theme">
                     <span class="theme-icon" style="--icon: url('/resources/icons/light_mode_24dp.svg');"
                           aria-hidden="true"></span>
-    </button>
-    <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
+            </button>
+            <button class="theme-btn" type="button" data-theme="dark" aria-label="Dark theme">
                     <span class="theme-icon" style="--icon: url('/resources/icons/dark_mode_24dp.svg');"
                           aria-hidden="true"></span>
-    </button>
+            </button>
+        </div>
+
+        <a href="#section1" class="sidebar__link">Офисы</a>
+        <a href="#section2" class="sidebar__link">Локация на карте</a>
+        <a href="#section3" class="sidebar__link">Департаменты</a>
+    </nav>
 </div>
+
+<main class="contacts">
+    <section class="contacts__section" id="section1">
+        <h2 class="contacts__title">Главные офисы</h2>
+
+        <div class="contacts__cards-grid">
+            <article class="contact-card">
+                <span class="contact-card__tag">HQ / Нью-Йорк</span>
+                <h3 class="contact-card__heading">Aurora Cinema NYC</h3>
+                <address class="contact-card__address">
+                    1245 Broadway, 10th Floor<br>
+                    New York, NY 10001, USA
+                </address>
+                <div class="contact-card__links">
+                    <a href="tel:+12125550192" class="contact-card__link">+1 (212) 555-0192</a>
+                    <a href="mailto:ny@auroracinema.com" class="contact-card__link">ny@auroracinema.com</a>
+                </div>
+            </article>
+
+            <article class="contact-card">
+                <span class="contact-card__tag">Production / Лос-Анджелес</span>
+                <h3 class="contact-card__heading">Aurora West Coast</h3>
+                <address class="contact-card__address">
+                    8942 Wilshire Blvd<br>
+                    Beverly Hills, CA 90211, USA
+                </address>
+                <div class="contact-card__links">
+                    <a href="tel:+13105550144" class="contact-card__link">+1 (310) 555-0144</a>
+                    <a href="mailto:la@auroracinema.com" class="contact-card__link">la@auroracinema.com</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="contacts__section" id="section2">
+        <h2 class="contacts__title">Мы на карте</h2>
+
+        <div class="contacts__map-container">
+            <div class="contacts__map-wrapper">
+                <img src="../resources/images/map.png" alt="Карта расположения офиса в Нью-Йорке"
+                     class="contacts__map-img" loading="lazy">
+
+                <div class="contacts__map-badge">
+                    <strong>1245 Broadway, Manhattan</strong>
+                    <span>Пн — Пт: 10:00 — 19:00 (EST)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts__section" id="section3">
+        <h2 class="contacts__title">Департаменты</h2>
+
+        <div class="contacts__departments">
+            <div class="department-row">
+                <div class="department-row__info">
+                    <h3>Пресса и фестивальные показы</h3>
+                    <p>Аккредитация СМИ, материалы для прессы и интервью с авторами.</p>
+                </div>
+                <a href="mailto:press@auroracinema.com" class="department-row__mail">press@auroracinema.com</a>
+            </div>
+
+            <div class="department-row">
+                <div class="department-row__info">
+                    <h3>Международная дистрибуция</h3>
+                    <p>Вопросы проката, приобретения прав и цифровых релизов (VOD).</p>
+                </div>
+                <a href="mailto:rights@auroracinema.com" class="department-row__mail">rights@auroracinema.com</a>
+            </div>
+
+            <div class="department-row">
+                <div class="department-row__info">
+                    <h3>Мерч и публикации</h3>
+                    <p>Вопросы по коллекционным печатным изданиям и онлайн-магазину.</p>
+                </div>
+                <a href="mailto:store@auroracinema.com" class="department-row__mail">store@auroracinema.com</a>
+            </div>
+        </div>
+    </section>
+
+</main>
 
 <footer class="footer">
     <nav class="footer__nav">
@@ -66,13 +155,10 @@
             Официальный сайт A24 ↗
         </a>
     </nav>
-
     <div class="footer__bottom">
         <span>© 2026 Film Collection</span>
         <span>Учебный проект</span>
     </div>
 </footer>
-
 </body>
-
 </html>

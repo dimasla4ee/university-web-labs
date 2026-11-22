@@ -14,7 +14,8 @@
     }
 }
 
-.sidebar--about {
+.sidebar--about,
+.sidebar--contacts {
     align-self: center;
 
     @media (min-width: 1024px) {
