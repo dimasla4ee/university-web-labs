@@ -5,7 +5,8 @@ html {
 }
 
 body {
-    padding: var(--frame-w);
+    padding: var(--frame-w) var(--frame-w) 0;
+    margin: 0 var(--frame-w);
     background-color: var(--bg-main);
     transition: var(--transition-theme);
 }

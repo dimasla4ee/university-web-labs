@@ -1,54 +1,63 @@
-.about-page {
-    min-height: 98vh; /*Временная мера из-за появления скроллбара при 100vh*/
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
 .timeline-section {
-    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(var(--frame-w) + 60px);
-    padding-bottom: 20px;
+    padding-block: 12px;
     box-sizing: border-box;
-    grid-area: cards;
+    grid-area: timeline;
 }
 
 .timeline__container {
+    --timeline-pad-x: clamp(8px, 2.5vw, calc(var(--frame-w) + 16px));
+
+    position: relative;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    padding: 20px calc(var(--frame-w) + 16px);
+    scroll-padding-inline: var(--timeline-pad-x);
+    scrollbar-width: none;
+    padding: 20px var(--timeline-pad-x);
     gap: 24px;
     box-sizing: border-box;
-
-    scrollbar-width: none;
 
     &::-webkit-scrollbar {
         display: none;
     }
+
+    &:focus-visible {
+        outline: 2px solid var(--border-strong);
+        outline-offset: 4px;
+        border-radius: 12px;
+    }
 }
 
 .timeline-stamp {
-    flex: 0 0 clamp(260px, 75vw, 380px);
+    flex: 0 0 min(100%, 380px);
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding-left: 16px;
     box-sizing: border-box;
-
     border-left: 2px solid color-mix(in srgb, var(--text-main) 25%, transparent);
+    transition: border-color 0.25s ease;
+
+    &:target,
+    &.is-active {
+        border-left-color: var(--text-main);
+    }
 }
 
 .timeline-stamp__year {
+    margin: 0;
     font-family: var(--font-display), Georgia, serif;
     font-size: clamp(48px, 12vw, 84px);
     font-weight: var(--fw-bold);
+    line-height: 1.1;
     color: var(--text-main);
 }
 
@@ -62,8 +71,6 @@
     opacity: 0.85;
 }
 
-.theme-switcher-wrapper {
-    padding: 0 calc(var(--frame-w) + 16px);
-    margin-top: 32px;
-    max-width: 280px;
+.page--about .footer {
+    margin-top: 0;
 }

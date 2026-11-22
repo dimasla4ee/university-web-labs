@@ -5,11 +5,20 @@
     height: auto;
     grid-area: sidebar;
     align-self: start;
+    box-sizing: border-box;
     transition: var(--transition-theme);
 
     @media (min-width: 1024px) {
         padding: 0 12px;
         margin-top: 30vh;
+    }
+}
+
+.page--about .sidebar {
+    align-self: center;
+
+    @media (min-width: 1024px) {
+        margin-top: 0;
     }
 }
 
@@ -64,7 +73,9 @@
     }
 
     &:hover,
-    &:focus-visible {
+    &:focus-visible,
+    &.is-active,
+    &[aria-current="location"] {
         color: var(--text-main);
         background: rgb(from var(--text-main) r g b / 7%);
         padding-left: 18px;

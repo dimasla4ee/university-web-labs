@@ -46,7 +46,7 @@
 }
 
 .theme-icon {
-    --icon-size: 24px;
+    --icon-size: clamp(16px, 4.5vw, 24px);
 
     display: block;
     width: var(--icon-size);

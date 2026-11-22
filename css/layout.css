@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
     grid-template-rows: auto auto auto 1fr auto;
+    min-height: calc(100vh - 2 * var(--frame-w));
     grid-template-areas:
         "header header"
         "hero hero"
@@ -18,8 +19,7 @@
         --gap-col: 24px;
         --horizontal-padding: calc(100% / 6.5);
 
-        min-height: 100vh;
-        grid-template-columns: var(--horizontal-padding) 1fr var(--horizontal-padding);
+        grid-template-columns: var(--horizontal-padding) minmax(0, 1fr) var(--horizontal-padding);
         grid-template-areas:
             "header header header"
             "sidebar hero hero"
@@ -27,6 +27,14 @@
             "sidebar cards aside"
             "footer footer footer";
     }
+}
+
+.page--about {
+    grid-template-rows: 16px 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar timeline"
+        "footer footer";
 }
 
 header {
