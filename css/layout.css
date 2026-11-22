@@ -11,7 +11,7 @@
         "header header"
         "hero hero"
         "sidebar info"
-        "sidebar cards"
+        "sidebar main"
         "footer footer";
     gap: var(--gap-row) var(--gap-col);
 
@@ -24,17 +24,9 @@
             "header header header"
             "sidebar hero hero"
             "sidebar info aside"
-            "sidebar cards aside"
+            "sidebar main aside"
             "footer footer footer";
     }
-}
-
-.page--about {
-    grid-template-rows: 16px 1fr auto;
-    grid-template-areas:
-        "header header"
-        "sidebar timeline"
-        "footer footer";
 }
 
 header {

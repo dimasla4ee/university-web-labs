@@ -28,7 +28,7 @@
 }
 
 .cards {
-    grid-area: cards;
+    grid-area: main;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
