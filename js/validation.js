@@ -129,6 +129,13 @@
         form.querySelectorAll('[data-password-rule]').forEach((ruleElement) => {
             ruleElement.dataset.met = String(Boolean(checks[ruleElement.dataset.passwordRule]));
         });
+
+        const metCount = Object.values(checks).filter(Boolean).length;
+        const progress = form.querySelector('#password-strength');
+        if (progress) {
+            progress.value = metCount;
+            progress.setAttribute('aria-valuetext', `${metCount} из ${progress.max} требований`);
+        }
     };
 
     const getValidationError = (field) => {
