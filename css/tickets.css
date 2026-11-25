@@ -1,0 +1,354 @@
+.cart-trigger {
+    position: fixed;
+    top: var(--frame-w);
+    right: calc(var(--frame-w) + 14px);
+    z-index: calc(var(--frame-z) + 1);
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 10px 6px 12px;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: var(--frame-color);
+    color: var(--on-frame-color);
+    font: 500 13px/1 var(--font-body), sans-serif;
+    cursor: pointer;
+}
+
+.cart-trigger:hover,
+.cart-trigger:focus-visible {
+    background: #292929;
+    outline: 2px solid var(--on-frame-color);
+    outline-offset: 2px;
+}
+
+.cart-trigger__icon {
+    width: 19px;
+    height: 19px;
+    flex: 0 0 auto;
+}
+
+.cart-trigger__count {
+    min-width: 20px;
+    height: 20px;
+    display: inline-grid;
+    place-items: center;
+    padding-inline: 4px;
+    box-sizing: border-box;
+    border-radius: 999px;
+    background: var(--on-frame-color);
+    color: var(--frame-color);
+    font-size: 11px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.ticket-purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 4px 2px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.ticket-purchase__price {
+    color: var(--text-main);
+    font: 500 var(--fs-sm)/1.3 var(--font-body), sans-serif;
+    white-space: nowrap;
+}
+
+.ticket-add {
+    min-height: 40px;
+    border: 1px solid var(--text-main);
+    border-radius: 999px;
+    padding: 8px 15px;
+    background: var(--text-main);
+    color: var(--bg-main);
+    font: 500 var(--fs-sm)/1.2 var(--font-body), sans-serif;
+    cursor: pointer;
+}
+
+.ticket-add:hover,
+.ticket-add:focus-visible {
+    background: transparent;
+    color: var(--text-main);
+    outline: 2px solid var(--text-main);
+    outline-offset: 2px;
+}
+
+.ticket-dialog {
+    width: min(600px, calc(100% - 32px));
+    max-width: none;
+    max-height: min(calc(var(--ticket-viewport-height, 100vh) - 32px), 760px);
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    border-radius: 18px;
+    background: var(--bg-main);
+    color: var(--text-main);
+    box-shadow: 0 24px 80px rgb(0 0 0 / 35%);
+}
+
+.ticket-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-dialog::backdrop {
+    background: rgb(0 0 0 / 70%);
+    backdrop-filter: blur(5px);
+}
+
+.ticket-dialog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 24px 18px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.ticket-dialog__eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-muted);
+    font: 600 11px/1.4 var(--font-body), sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ticket-dialog__title {
+    margin: 0;
+    color: var(--text-main);
+    font: 400 clamp(23px, 5vw, 32px)/1.15 var(--font-display), Georgia, serif;
+}
+
+.ticket-dialog__close {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-main);
+    font: 300 26px/1 var(--font-body), sans-serif;
+    cursor: pointer;
+}
+
+.ticket-dialog__close:hover,
+.ticket-dialog__close:focus-visible {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.ticket-dialog__body {
+    min-height: 80px;
+    overflow-y: auto;
+    padding: 18px 24px;
+}
+
+.ticket-dialog__hint {
+    margin: 0 0 16px;
+    color: var(--text-muted);
+    font: 400 13px/1.5 var(--font-body), sans-serif;
+}
+
+.ticket-cart__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ticket-cart__empty {
+    padding: 20px 8px;
+    color: var(--text-muted);
+    font: 400 15px/1.6 var(--font-body), sans-serif;
+    text-align: center;
+}
+
+.ticket-cart__item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background: var(--bg-surface);
+}
+
+.ticket-cart__info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ticket-cart__name {
+    color: var(--text-main);
+    font: 500 16px/1.35 var(--font-display), Georgia, serif;
+}
+
+.ticket-cart__unit-price {
+    color: var(--text-muted);
+    font: 400 13px/1.4 var(--font-body), sans-serif;
+}
+
+.ticket-cart__controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.ticket-cart__quantity-button {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border-strong);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text-main);
+    font: 400 20px/1 var(--font-body), sans-serif;
+    cursor: pointer;
+}
+
+.ticket-cart__quantity-button:hover:not(:disabled),
+.ticket-cart__quantity-button:focus-visible {
+    background: var(--text-main);
+    color: var(--bg-main);
+}
+
+.ticket-cart__quantity-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.ticket-cart__quantity {
+    min-width: 20px;
+    color: var(--text-main);
+    font: 600 14px/1 var(--font-body), sans-serif;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.ticket-cart__remove {
+    margin-left: 4px;
+    padding: 6px 0 6px 6px;
+    border: 0;
+    background: transparent;
+    color: var(--text-muted);
+    font: 400 12px/1.2 var(--font-body), sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
+.ticket-cart__remove:hover,
+.ticket-cart__remove:focus-visible {
+    color: var(--text-main);
+}
+
+.ticket-dialog__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 24px 22px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.ticket-cart__total-label {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--text-muted);
+    font: 400 12px/1.3 var(--font-body), sans-serif;
+}
+
+.ticket-cart__total {
+    color: var(--text-main);
+    font: 600 22px/1.2 var(--font-body), sans-serif;
+    font-variant-numeric: tabular-nums;
+}
+
+.ticket-dialog__continue {
+    min-height: 42px;
+    border: 1px solid var(--text-main);
+    border-radius: 999px;
+    padding: 9px 16px;
+    background: var(--text-main);
+    color: var(--bg-main);
+    font: 500 13px/1.2 var(--font-body), sans-serif;
+    cursor: pointer;
+}
+
+.ticket-dialog__continue:hover,
+.ticket-dialog__continue:focus-visible {
+    background: transparent;
+    color: var(--text-main);
+}
+
+.cart-trigger:focus-visible,
+.ticket-add:focus-visible,
+.ticket-dialog button:focus-visible {
+    outline-offset: 3px;
+}
+
+@media (max-width: 950px) {
+    .header__notch[aria-expanded="true"] + .cart-trigger {
+        top: calc(var(--frame-w) + 126px);
+    }
+}
+
+@media (max-width: 540px) {
+    .cart-trigger {
+        right: calc(var(--frame-w) + 8px);
+        min-width: 52px;
+        padding-inline: 8px;
+    }
+
+    .cart-trigger__label {
+        display: none;
+    }
+
+    .ticket-dialog__header,
+    .ticket-dialog__body {
+        padding-inline: 18px;
+    }
+
+    .ticket-dialog__footer {
+        align-items: flex-end;
+        padding-inline: 18px;
+    }
+
+    .ticket-cart__item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ticket-cart__controls {
+        justify-content: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ticket-add,
+    .cart-trigger,
+    .ticket-dialog__close,
+    .ticket-dialog__continue,
+    .ticket-cart__quantity-button {
+        transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+}

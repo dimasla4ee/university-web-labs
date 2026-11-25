@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/theme-switcher.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/tickets.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +26,8 @@
 
     <script defer src="js/theme.js"></script>
     <script defer src="js/notch-interaction.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -41,6 +44,18 @@
                 <a href="html/contacts.html" class="header__link--inactive">Контакты</a>
             </nav>
         </div>
+
+        <button class="cart-trigger" id="cart-trigger" type="button"
+                aria-label="Открыть корзину билетов" aria-haspopup="dialog" aria-controls="ticket-cart-dialog">
+            <svg class="cart-trigger__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"
+                      fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+                <circle cx="10" cy="20" r="1.2" fill="currentColor"/>
+                <circle cx="18" cy="20" r="1.2" fill="currentColor"/>
+            </svg>
+            <span class="cart-trigger__label">Билеты</span>
+            <span class="cart-trigger__count" id="cart-count" aria-live="polite">0</span>
+        </button>
     </header>
 
     <section class="hero" id="collage">
@@ -122,6 +137,13 @@
                     бездну.
                 </p>
             </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 450 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="see-everything">
+                    Добавить билет
+                </button>
+            </div>
         </section>
 
         <section class="card" id="section2">
@@ -147,6 +169,13 @@
                     Мисти не может найти новые роли и, оказавшись на грани выселения, она пытается вернуть своё место в
                     киноиндустрии.
                 </p>
+            </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 480 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="misty-green">
+                    Добавить билет
+                </button>
             </div>
         </section>
 
@@ -175,6 +204,13 @@
                     Однако в жизни самого Криса назревают серьёзные проблемы.
                 </p>
             </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 520 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="primetime">
+                    Добавить билет
+                </button>
+            </div>
         </section>
 
         <section class="card" id="section4">
@@ -200,6 +236,13 @@
                     убийств, не знающие сострадания. Оставляя за собой кровавый след, они нападают на трейлерный парк,
                     где живёт бывшая военная снайпер Селеста с маленькой дочерью. Но эту женщину так легко не возьмёшь.
                 </p>
+            </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 500 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="onslaught">
+                    Добавить билет
+                </button>
             </div>
         </section>
 
@@ -228,6 +271,13 @@
                     где пространство живёт по своей логике, а нечто жуткое может скрываться за каждым углом.
                 </p>
             </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 460 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="backrooms">
+                    Добавить билет
+                </button>
+            </div>
         </section>
 
         <section class="card" id="section6">
@@ -255,6 +305,13 @@
                     ставшей успешным модным дизайнером, чтобы та сделала ей концертный наряд.
                     Женщинам есть что вспомнить и обсудить.
                 </p>
+            </div>
+
+            <div class="ticket-purchase">
+                <span class="ticket-purchase__price">Билет · 510 ₽</span>
+                <button class="ticket-add" type="button" data-cart-add data-product-id="mother-mary">
+                    Добавить билет
+                </button>
             </div>
         </section>
     </main>
