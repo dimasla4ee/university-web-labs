@@ -19,6 +19,24 @@ export const makeButton = (className, text, action, productId) => {
     return button;
 };
 
+export const makeIconButton = (className, action, {icon, label, productId} = {}) => {
+    const button = document.createElement('button');
+    const ICON_BASE = new URL('../resources/icons/', import.meta.url);
+    button.type = 'button';
+    button.className = className;
+    button.dataset.cartAction = action;
+    if (productId) button.dataset.productId = productId;
+    if (label) button.setAttribute('aria-label', label);
+
+    const iconElement = document.createElement('span');
+    iconElement.className = 'ticket-icon';
+    iconElement.setAttribute('aria-hidden', 'true');
+    iconElement.style.setProperty('--icon', `url("${new URL(icon, ICON_BASE).href}")`);
+    button.append(iconElement);
+
+    return button;
+};
+
 export const ticketWord = (count) => {
     const lastTwoDigits = count % 100;
     const lastDigit = count % 10;
@@ -38,21 +56,17 @@ export const createCartDialog = () => {
     const header = makeElement('div', 'ticket-dialog__header');
     const headingGroup = makeElement('div');
     headingGroup.append(
-        makeElement('span', 'ticket-dialog__eyebrow', 'Коллекция фильмов'),
         makeElement('h2', 'ticket-dialog__title', 'Ваши билеты'),
     );
     headingGroup.lastElementChild.id = 'ticket-dialog-title';
 
-    const closeButton = makeButton('ticket-dialog__close', '×', 'close');
-    closeButton.setAttribute('aria-label', 'Закрыть корзину');
+    const closeButton = makeIconButton('ticket-dialog__close', 'close', {
+        icon: 'close_24dp.svg',
+        label: 'Закрыть корзину',
+    });
     header.append(headingGroup, closeButton);
 
     const body = makeElement('div', 'ticket-dialog__body');
-    body.append(makeElement(
-        'p',
-        'ticket-dialog__hint',
-        'Количество билетов и итоговая сумма обновляются автоматически.',
-    ));
     const list = makeElement('ul', 'ticket-cart__list');
     list.setAttribute('aria-label', 'Билеты в корзине');
     body.append(list);
@@ -64,16 +78,16 @@ export const createCartDialog = () => {
         makeElement('strong', 'ticket-cart__total', currency.format(0)),
     );
     totalGroup.lastElementChild.id = 'ticket-cart-total';
-    const continueButton = makeButton('ticket-dialog__continue', 'Продолжить просмотр', 'close');
+    const continueButton = makeButton('ticket-dialog__continue', 'Продолжить покупку', 'close');
     footer.append(totalGroup, continueButton);
 
     dialog.append(header, body, footer);
     document.body.append(dialog);
 
-    return { dialog, list, total: totalGroup.lastElementChild };
+    return {dialog, list, total: totalGroup.lastElementChild};
 };
 
-export const renderCart = ({ cartDialog, cartCount, cartTrigger, headerNotch, films, cart }) => {
+export const renderCart = ({cartDialog, cartCount, cartTrigger, headerNotch, films, cart}) => {
     const quantity = cart.reduce((sum, item) => sum + item.quantity, 0);
     const hasItems = quantity > 0;
     const notch = headerNotch ?? cartTrigger.closest('.header__notch');
@@ -119,15 +133,21 @@ export const renderCart = ({ cartDialog, cartCount, cartTrigger, headerNotch, fi
         );
 
         const controls = makeElement('div', 'ticket-cart__controls');
-        const decrease = makeButton('ticket-cart__quantity-button', '−', 'decrease', id);
-        decrease.setAttribute('aria-label', `Уменьшить количество билетов «${film.title}»`);
+        const decrease = makeIconButton('ticket-cart__quantity-button', 'decrease', {
+            icon: 'remove_24dp.svg',
+            label: `Уменьшить количество билетов «${film.title}»`,
+            productId: id,
+        });
         decrease.disabled = itemQuantity <= 1;
 
         const currentQuantity = makeElement('output', 'ticket-cart__quantity', String(itemQuantity));
         currentQuantity.setAttribute('aria-label', 'Количество билетов');
 
-        const increase = makeButton('ticket-cart__quantity-button', '+', 'increase', id);
-        increase.setAttribute('aria-label', `Увеличить количество билетов «${film.title}»`);
+        const increase = makeIconButton('ticket-cart__quantity-button', 'increase', {
+            icon: 'add_24dp.svg',
+            label: `Увеличить количество билетов «${film.title}»`,
+            productId: id,
+        });
         increase.disabled = itemQuantity >= 99;
 
         const remove = makeButton('ticket-cart__remove', 'Удалить', 'remove', id);
