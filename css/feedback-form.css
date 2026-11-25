@@ -9,7 +9,6 @@
 }
 
 .feedback-section__intro p {
-    max-width: 68ch;
     margin: 0;
     color: var(--text-muted);
     font: 400 var(--fs-sm)/1.6 var(--font-body), sans-serif;
@@ -39,9 +38,15 @@
 }
 
 .feedback-form__grid {
+    --v-padding: 0;
+
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 16px;
+    gap: var(--v-padding) 16px;
+
+    @media (min-width: 1024px) {
+        --v-padding: 20px;
+    }
 }
 
 .form-field {
@@ -52,7 +57,14 @@
 }
 
 .form-field--wide {
+    --margin-top: 20px;
+
     grid-column: 1 / -1;
+    margin-top: var(--margin-top);
+
+    @media (min-width: 1024px) {
+        --margin-top: 0;
+    }
 }
 
 .form-field__label {
