@@ -9,8 +9,6 @@
     const submitButton = form.querySelector('#feedback-submit');
     const status = form.querySelector('#feedback-status');
     const passwordInput = fieldsByName.get('password');
-    const passwordProgress = form.querySelector('#password-strength');
-    const passwordStrengthLabel = form.querySelector('#password-strength-label');
 
     const TEMPORARY_EMAIL_DOMAINS = new Set([
         '10minutemail.com',
@@ -127,12 +125,6 @@
     const updatePasswordStrength = () => {
         const value = passwordInput.value;
         const checks = getPasswordChecks(value);
-        const score = Object.values(checks).filter(Boolean).length;
-        const labels = ['Не введён', 'Очень низкая', 'Низкая', 'Хорошая', 'Высокая'];
-
-        passwordProgress.value = score;
-        passwordProgress.setAttribute('aria-valuetext', `${score} из 4 требований`);
-        passwordStrengthLabel.textContent = `${labels[score]} · ${score}/4`;
 
         form.querySelectorAll('[data-password-rule]').forEach((ruleElement) => {
             ruleElement.dataset.met = String(Boolean(checks[ruleElement.dataset.passwordRule]));
@@ -300,6 +292,6 @@
         fields.forEach(updateFieldFeedback);
         updatePasswordStrength();
         updateSubmitState();
-        status.textContent = 'Форма прошла проверку. В демо-режиме данные не отправляются на сервер.';
+        status.textContent = 'Спасибо за сообщение! Мы ответим вам на указанную почту.';
     });
 })();
