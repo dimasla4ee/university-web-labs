@@ -73,14 +73,26 @@ export const createCartDialog = () => {
     return { dialog, list, total: totalGroup.lastElementChild };
 };
 
-export const renderCart = ({ cartDialog, cartCount, cartTrigger, films, cart }) => {
+export const renderCart = ({ cartDialog, cartCount, cartTrigger, headerNotch, films, cart }) => {
     const quantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const hasItems = quantity > 0;
+    const notch = headerNotch ?? cartTrigger.closest('.header__notch');
+
+    if (hasItems) {
+        cartTrigger.disabled = false;
+        cartTrigger.removeAttribute('aria-hidden');
+    } else {
+        cartTrigger.disabled = true;
+        cartTrigger.setAttribute('aria-hidden', 'true');
+    }
+
     cartCount.textContent = String(quantity);
     cartTrigger.setAttribute(
         'aria-label',
-        quantity ? `Открыть корзину: ${quantity} ${ticketWord(quantity)}` : 'Открыть корзину билетов',
+        hasItems ? `Открыть корзину: ${quantity} ${ticketWord(quantity)}` : 'Открыть корзину билетов',
     );
-    cartTrigger.classList.toggle('cart-trigger--has-items', quantity > 0);
+    cartTrigger.classList.toggle('header__cart--has-items', hasItems);
+    notch?.classList.toggle('has-cart', hasItems);
 
     cartDialog.list.replaceChildren();
     let total = 0;

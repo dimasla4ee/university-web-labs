@@ -8,6 +8,7 @@ import {
 
 const storage = window.FilmAppStorage;
 const catalog = document.querySelector('.cards');
+const headerNotch = document.querySelector('.header__notch');
 const cartTrigger = document.querySelector('#cart-trigger');
 const cartCount = document.querySelector('#cart-count');
 
@@ -43,7 +44,7 @@ const init = () => {
     });
     let cart = Array.from(initialById, ([id, quantity]) => ({id, quantity}));
 
-    const render = () => renderCart({ cartDialog, cartCount, cartTrigger, films, cart });
+    const render = () => renderCart({ cartDialog, cartCount, cartTrigger, headerNotch, films, cart });
     const saveCart = () => {
         storage.setCart(cart);
         render();
@@ -69,7 +70,14 @@ const init = () => {
         openCart(cartDialog.dialog);
     });
 
-    cartTrigger.addEventListener('click', () => openCart(cartDialog.dialog));
+    cartTrigger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (headerNotch && headerNotch.getAttribute('aria-expanded') === 'true') {
+            headerNotch.setAttribute('aria-expanded', 'false');
+            headerNotch.classList.remove('is-open');
+        }
+        openCart(cartDialog.dialog);
+    });
 
     cartDialog.dialog.addEventListener('click', (event) => {
         if (event.target === cartDialog.dialog) {
