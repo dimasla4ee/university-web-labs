@@ -38,25 +38,30 @@
              tabindex="0"
              aria-expanded="false"
              aria-label="Переключить меню">
+            <button class="header__cart"
+                    id="cart-trigger"
+                    type="button"
+                    disabled
+                    aria-hidden="true"
+                    aria-label="Открыть корзину билетов"
+                    aria-haspopup="dialog"
+                    aria-controls="ticket-cart-dialog">
+                <svg class="header__cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"
+                          fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.7"/>
+                    <circle cx="10" cy="20" r="1.2" fill="currentColor"/>
+                    <circle cx="18" cy="20" r="1.2" fill="currentColor"/>
+                </svg>
+                <span class="header__cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+
             <nav class="header__nav">
                 <a class="header__link--active" aria-current="page">Главная</a>
                 <a href="html/about.html" class="header__link--inactive">О нас</a>
                 <a href="html/contacts.html" class="header__link--inactive">Контакты</a>
             </nav>
         </div>
-
-        <button class="cart-trigger" id="cart-trigger" type="button"
-                aria-label="Открыть корзину билетов" aria-haspopup="dialog" aria-controls="ticket-cart-dialog">
-            <svg class="cart-trigger__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6"
-                      fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="1.7"/>
-                <circle cx="10" cy="20" r="1.2" fill="currentColor"/>
-                <circle cx="18" cy="20" r="1.2" fill="currentColor"/>
-            </svg>
-            <span class="cart-trigger__label">Билеты</span>
-            <span class="cart-trigger__count" id="cart-count" aria-live="polite">0</span>
-        </button>
     </header>
 
     <section class="hero" id="collage">

@@ -1,51 +1,3 @@
-.cart-trigger {
-    position: fixed;
-    top: var(--frame-w);
-    right: calc(var(--frame-w) + 14px);
-    z-index: calc(var(--frame-z) + 1);
-    min-height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 6px 10px 6px 12px;
-    border: 1px solid rgb(255 255 255 / 18%);
-    border-top: 0;
-    border-radius: 0 0 12px 12px;
-    background: var(--frame-color);
-    color: var(--on-frame-color);
-    font: 500 13px/1 var(--font-body), sans-serif;
-    cursor: pointer;
-}
-
-.cart-trigger:hover,
-.cart-trigger:focus-visible {
-    background: #292929;
-    outline: 2px solid var(--on-frame-color);
-    outline-offset: 2px;
-}
-
-.cart-trigger__icon {
-    width: 19px;
-    height: 19px;
-    flex: 0 0 auto;
-}
-
-.cart-trigger__count {
-    min-width: 20px;
-    height: 20px;
-    display: inline-grid;
-    place-items: center;
-    padding-inline: 4px;
-    box-sizing: border-box;
-    border-radius: 999px;
-    background: var(--on-frame-color);
-    color: var(--frame-color);
-    font-size: 11px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-}
-
 .ticket-purchase {
     display: flex;
     align-items: center;
@@ -300,29 +252,12 @@
     color: var(--text-main);
 }
 
-.cart-trigger:focus-visible,
 .ticket-add:focus-visible,
 .ticket-dialog button:focus-visible {
     outline-offset: 3px;
 }
 
-@media (max-width: 950px) {
-    .header__notch[aria-expanded="true"] + .cart-trigger {
-        top: calc(var(--frame-w) + 126px);
-    }
-}
-
 @media (max-width: 540px) {
-    .cart-trigger {
-        right: calc(var(--frame-w) + 8px);
-        min-width: 52px;
-        padding-inline: 8px;
-    }
-
-    .cart-trigger__label {
-        display: none;
-    }
-
     .ticket-dialog__header,
     .ticket-dialog__body {
         padding-inline: 18px;
@@ -345,7 +280,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .ticket-add,
-    .cart-trigger,
     .ticket-dialog__close,
     .ticket-dialog__continue,
     .ticket-cart__quantity-button {
