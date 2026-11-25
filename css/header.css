@@ -78,6 +78,8 @@
 }
 
 .header__cart {
+    --cart-padding: 6px;
+
     position: absolute;
     top: 18px;
     left: 8px;
@@ -87,10 +89,10 @@
     justify-content: center;
     gap: 5px;
     height: 24px;
-    padding: 0 2px 0 7px;
+    padding: var(--cart-padding);
     box-sizing: border-box;
     border: 1px solid rgb(255 255 255 / 18%);
-    border-radius: 999px;
+    border-radius: calc(var(--notch-radius) - var(--cart-padding));
     background-color: rgb(255 255 255 / 12%);
     color: var(--on-frame-color);
     font-family: var(--font-body), sans-serif;
@@ -101,17 +103,16 @@
     opacity: 0;
     pointer-events: none;
     z-index: 1;
-    transition:
-        opacity 200ms ease,
-        transform 240ms ease,
-        top 500ms ease,
-        left 500ms ease,
-        height 300ms ease,
-        padding 300ms ease,
-        background-color 160ms ease,
-        color 160ms ease,
-        border-color 160ms ease,
-        display 0s 200ms allow-discrete;
+    transition: opacity 200ms ease,
+    transform 240ms ease,
+    top 500ms ease,
+    left 500ms ease,
+    height 300ms ease,
+    padding 300ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    display 0s 200ms allow-discrete;
 }
 
 .header__cart::before {
@@ -139,15 +140,11 @@
 }
 
 .header__cart-count {
-    min-width: 18px;
-    height: 18px;
     display: inline-grid;
     place-items: center;
     padding-inline: 4px;
     box-sizing: border-box;
-    border-radius: 999px;
-    background-color: var(--on-frame-color);
-    color: var(--frame-color);
+    color: var(--on-frame-color);
     font-size: 11px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
@@ -156,8 +153,7 @@
 
 .header__cart:hover .header__cart-count,
 .header__cart:focus-visible .header__cart-count {
-    background-color: var(--frame-color);
-    color: var(--on-frame-color);
+    color: var(--frame-color);
 }
 
 .header__notch:where(.has-cart) .header__cart {
@@ -165,17 +161,16 @@
     opacity: 1;
     transform: translate(0, -50%) scale(1);
     pointer-events: auto;
-    transition:
-        opacity 220ms ease 140ms,
-        transform 500ms ease,
-        top 500ms ease,
-        left 500ms ease,
-        height 300ms ease,
-        padding 300ms ease,
-        background-color 160ms ease,
-        color 160ms ease,
-        border-color 160ms ease,
-        display 0s 0s allow-discrete;
+    transition: opacity 220ms ease 140ms,
+    transform 500ms ease,
+    top 500ms ease,
+    left 500ms ease,
+    height 300ms ease,
+    padding 300ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    display 0s 0s allow-discrete;
 }
 
 .header__notch:where(.has-cart):where([aria-expanded="true"], .is-open) .header__cart {
@@ -184,17 +179,16 @@
     height: 28px;
     padding: 0 4px 0 10px;
     transform: translate(-50%, -50%) scale(1);
-    transition:
-        opacity 220ms ease 140ms,
-        transform 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
-        top 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
-        left 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
-        height 300ms ease,
-        padding 300ms ease,
-        background-color 160ms ease,
-        color 160ms ease,
-        border-color 160ms ease,
-        display 0s 0s allow-discrete;
+    transition: opacity 220ms ease 140ms,
+    transform 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
+    top 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
+    left 500ms cubic-bezier(0.34, 1.4, 0.64, 1),
+    height 300ms ease,
+    padding 300ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    display 0s 0s allow-discrete;
 }
 
 @starting-style {
