@@ -4,7 +4,6 @@
 <!--
     TODO:
         - Мобильная версия:
-            - Сложность пароля адаптировать
             - Поместить боковое меню выше
 -->
 
@@ -192,14 +191,13 @@
                 </div>
 
                 <div class="form-field form-field--password">
-                    <label class="form-field__label" for="feedback-password">Пароль для регистрации</label>
+                    <label class="form-field__label" for="feedback-password">Пароль</label>
                     <input class="form-field__input" id="feedback-password" name="password" type="password"
                            autocomplete="new-password" required data-validate="password"
                            aria-describedby="password-hint password-strength-label feedback-password-error">
                     <div class="password-strength">
                         <div class="password-strength__caption">
                             <span>Сложность пароля</span>
-                            <output id="password-strength-label" for="feedback-password">Не введён · 0/4</output>
                         </div>
                         <progress class="password-strength__bar" id="password-strength" max="4" value="0"
                                   aria-label="Сложность пароля" aria-valuetext="0 из 4 требований"></progress>
