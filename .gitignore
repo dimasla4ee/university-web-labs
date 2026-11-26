@@ -1,0 +1,7 @@
+/.idea/
+frontend/shelf/
+frontend/workspace.xml
+frontend/httpRequests/
+frontend/queries/
+frontend/dataSources/
+frontend/dataSources.local.xml
