@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="build(project): Добавить схему БД и gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode">
+      <change afterPath="$PROJECT_DIR$/backend/testing/test_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,61 +53,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="3.825454392181628E-186" />
-      <entry key="S10" value="3.816545056949564E-93" />
-      <entry key="S30" value="3.914616496472293E-31" />
-      <entry key="S60" value="1.2503819231224752E-15" />
-      <entry key="M2" value="7.0707861379017E-8" />
-      <entry key="M5" value="0.0031695887982581086" />
-      <entry key="M10" value="0.11259733020925139" />
-      <entry key="M15" value="0.37014575787307225" />
-      <entry key="M30" value="1.223893563395173" />
-      <entry key="H1" value="2.7720044076823767" />
-      <entry key="H2" value="8.443423750056237" />
-      <entry key="H4" value="24.052186696893408" />
-      <entry key="D1" value="562.8970848520516" />
-      <entry key="W1" value="3046.8537705835924" />
+      <entry key="MS100" value="1.1905668658668758" />
+      <entry key="MS500" value="2.9035551524804424" />
+      <entry key="S2" value="4.8189721007418" />
+      <entry key="S5" value="5.478635502542219" />
+      <entry key="S10" value="5.730297221865403" />
+      <entry key="S30" value="5.908006901600243" />
+      <entry key="S60" value="5.953736245325977" />
+      <entry key="M2" value="5.976800917844693" />
+      <entry key="M5" value="5.992980654199064" />
+      <entry key="M10" value="6.09077383313523" />
+      <entry key="M15" value="6.328381409425183" />
+      <entry key="M30" value="7.156659741205732" />
+      <entry key="H1" value="8.695820293122885" />
+      <entry key="H2" value="14.327398157982184" />
+      <entry key="H4" value="29.886720308218447" />
+      <entry key="D1" value="568.2505493495655" />
+      <entry key="W1" value="3052.3536057865917" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000152142663" />
-      <entry key="MS500" value="1.0273180818878243" />
-      <entry key="S2" value="1.406548675613169" />
-      <entry key="S5" value="1.6976619222853366" />
-      <entry key="S10" value="1.8352615891356052" />
-      <entry key="S30" value="1.9417612930435424" />
-      <entry key="S60" value="1.9704438639321404" />
-      <entry key="M2" value="1.9851111085972906" />
-      <entry key="M5" value="1.9947870034692916" />
-      <entry key="M10" value="2.024742050086095" />
-      <entry key="M15" value="2.089633899236168" />
-      <entry key="M30" value="2.3017082472618" />
-      <entry key="H1" value="2.549690514140314" />
-      <entry key="H2" value="2.7440962645236904" />
-      <entry key="H4" value="3.0593771434618726" />
-      <entry key="D1" value="56.26505019844329" />
-      <entry key="W1" value="449.20311504501564" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="5.883306503086141E-87" />
+      <entry key="S2" value="3.8693133493090275E-22" />
+      <entry key="S5" value="4.0331359538157485E-9" />
+      <entry key="S10" value="8.945277181330847E-5" />
+      <entry key="S30" value="0.07092964431072883" />
+      <entry key="S60" value="0.37659975914516447" />
+      <entry key="M2" value="0.8678462780869587" />
+      <entry key="M5" value="1.4327147243378213" />
+      <entry key="M10" value="1.715936844765736" />
+      <entry key="M15" value="1.871362560252206" />
+      <entry key="M30" value="2.178181873287848" />
+      <entry key="H1" value="2.4803296282106646" />
+      <entry key="H2" value="2.706514193976619" />
+      <entry key="H4" value="3.038354900049728" />
+      <entry key="D1" value="56.20042820039769" />
+      <entry key="W1" value="449.1293755326968" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.003906250011984827" />
-      <entry key="MS500" value="0.33641921587688317" />
-      <entry key="S2" value="1.0422595902233251" />
-      <entry key="S5" value="1.499770556654013" />
-      <entry key="S10" value="1.723711480848492" />
-      <entry key="S30" value="1.9012783946149985" />
-      <entry key="S60" value="1.949754490867404" />
-      <entry key="M2" value="1.9746516705459796" />
-      <entry key="M5" value="1.993741496754368" />
-      <entry key="M10" value="2.13516858954093" />
-      <entry key="M15" value="2.4582391933844794" />
-      <entry key="M30" value="3.52467874239871" />
-      <entry key="H1" value="5.321133253012951" />
-      <entry key="H2" value="11.187161279905167" />
-      <entry key="H4" value="27.111295990065905" />
-      <entry key="D1" value="619.1605758724718" />
-      <entry key="W1" value="3496.0550465587976" />
+      <entry key="MS100" value="1.1229082790917653" />
+      <entry key="MS500" value="2.80212038509061" />
+      <entry key="S2" value="4.7779417930510855" />
+      <entry key="S5" value="5.4604282740944665" />
+      <entry key="S10" value="5.720950461631796" />
+      <entry key="S30" value="5.974238632181778" />
+      <entry key="S60" value="6.324762568146234" />
+      <entry key="M2" value="6.839262514413757" />
+      <entry key="M5" value="7.4223425830244665" />
+      <entry key="M10" value="7.804708174864358" />
+      <entry key="M15" value="8.198255864300053" />
+      <entry key="M30" value="9.333913799070723" />
+      <entry key="H1" value="11.175576386405774" />
+      <entry key="H2" value="17.033544956918103" />
+      <entry key="H4" value="32.92480241159166" />
+      <entry key="D1" value="624.449419031527" />
+      <entry key="W1" value="3501.4811423897772" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -191,15 +192,7 @@
       <workItem from="1795282036993" duration="3687000" />
       <workItem from="1795333202718" duration="16064000" />
       <workItem from="1795424729417" duration="4074000" />
-      <workItem from="1795525042816" duration="25047000" />
-    </task>
-    <task id="LOCAL-00003" summary="refactor: перестроить layout страницы на CSS Grid и Flexbox&#10;&#10;- Добавлена grid-разметка .page с областями header/sidebar/main&#10;- Стили коллажа вынесены из sidebar.css в отдельный collage.css&#10;- Добавлены карточки через Flexbox с flex-wrap в card.css&#10;- Сайдбар привязан к grid-area с position: sticky&#10;- Структура index.html переписана: обёртка .page, семантические секции&#10;- Удалён placeholder-текст, добавлена якорная навигация в сайдбаре">
-      <option name="closed" value="true" />
-      <created>1793370775518</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1793370775518</updated>
+      <workItem from="1795525042816" duration="25839000" />
     </task>
     <task id="LOCAL-00004" summary="feat: оформить карточки фильмов с изображениями и подключить шрифт Literata&#10;&#10;- Карточки дополнены обложками с градиентным оверлеем и backdrop-filter&#10;- Позиции маски в коллаже рассчитываются динамически через calc() и --slots&#10;- Вертикальный текст в коллаже реализован через writing-mode вместо transform&#10;- Подключён шрифт Literata через Google Fonts&#10;- Весь контент переведён на русский язык (названия фильмов, навигация)&#10;- Скорректирован фон страницы и z-index декоративной рамки">
       <option name="closed" value="true" />
@@ -585,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795683045524</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode">
+      <option name="closed" value="true" />
+      <created>1795705399708</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1795705399708</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +604,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: стилизовать горизонтальный таймлайн на странице «О нас»&#10;&#10;- Добавлен scroll-snap в .timeline__container для пошаговой прокрутки&#10;- Стилизованы элементы карточек истории: годы (.timeline-stamp__year) и текст (.timeline-stamp__text)&#10;- Скрыты стандартные полосы прокрутки для хронологической ленты&#10;- Разметка страницы переведена на семантические теги (&lt;main&gt;, &lt;article&gt;)&#10;- Переключатель тем вынесен в адаптивный контейнер .theme-switcher-wrapper" />
     <MESSAGE value="fix(about): Исправить стиль активного раздела в футере" />
     <MESSAGE value="feat(about): Заменить текст-заглушку на актуальный таймлайн" />
     <MESSAGE value="feat(about): Добавить сайдбар на страницу&#10;&#10;Сайдбар позволяет перемещаться по таймстэмпам без скроллинга. Для реализации сайдбара был использован `layout.css`." />
@@ -628,6 +628,7 @@
     <MESSAGE value="fix(theme): Исправить цвета в переключателе тем" />
     <MESSAGE value="build(project): Сделать проект мультимодульным" />
     <MESSAGE value="build(project): Добавить схему БД и gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="build(project): Добавить схему БД и gitignore" />
+    <MESSAGE value="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode" />
   </component>
 </project>
