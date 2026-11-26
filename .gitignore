@@ -1,4 +1,7 @@
 /.idea/
+/.vscode/
+/backend/.env
+/backend/.venv
 frontend/shelf/
 frontend/workspace.xml
 frontend/httpRequests/

@@ -4,102 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="build(project): Сделать проект мультимодульным">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/university-web-labs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/collage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/contacts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/feedback-form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/frame.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/theme-switcher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/tickets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/timeline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/tokens-modern.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/css/tokens.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/html/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/html/contacts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/notch-interaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/js/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/add_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/close_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/dark_mode_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/light_mode_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/monitor_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/remove_24dp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/a24_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/backrooms.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/map.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/misty-green.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/mother-mary.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/onslaught.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/primetime.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/images/you-can-see-everything.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/resources/videos/primetime-trailer.webm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/university-web-labs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/collage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/contacts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/feedback-form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/frame.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sidebar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/theme-switcher.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/tickets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/timeline.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/tokens-modern.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/tokens.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/contacts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/notch-interaction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/storage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/timeline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/add_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/close_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/dark_mode_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/light_mode_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/monitor_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/icons/remove_24dp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/a24_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/backrooms.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/map.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/misty-green.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/mother-mary.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/onslaught.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/primetime.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/you-can-see-everything.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/videos/primetime-trailer.webm" beforeDir="false" />
+    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="build(project): Добавить схему БД и gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,61 +52,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000021608045297" />
-      <entry key="MS500" value="1.0736350268198716" />
-      <entry key="S2" value="1.6002624842622253" />
-      <entry key="S5" value="2.368453033595344" />
-      <entry key="S10" value="3.634847272812622" />
-      <entry key="S30" value="7.823085811132693" />
-      <entry key="S60" value="10.92658487373781" />
-      <entry key="M2" value="14.284605577148922" />
-      <entry key="M5" value="20.02422155593762" />
-      <entry key="M10" value="23.960159308821783" />
-      <entry key="M15" value="25.69430435987006" />
-      <entry key="M30" value="28.03298029461489" />
-      <entry key="H1" value="31.434844992041263" />
-      <entry key="H2" value="36.855074003204216" />
-      <entry key="H4" value="50.31454510917903" />
-      <entry key="D1" value="658.7130503391709" />
-      <entry key="W1" value="3111.784648410811" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="7.191531124831449E-242" />
-      <entry key="M2" value="2.681703026964664E-121" />
-      <entry key="M5" value="5.9069633039535956E-49" />
-      <entry key="M10" value="7.685677172105024E-25" />
-      <entry key="M15" value="8.390547544067483E-17" />
-      <entry key="M30" value="9.210609020901749E-9" />
-      <entry key="H1" value="1.134533432240976E-4" />
-      <entry key="H2" value="0.022330935448471482" />
-      <entry key="H4" value="0.5811232335634428" />
-      <entry key="D1" value="63.75052116756756" />
-      <entry key="W1" value="457.7793202456075" />
+      <entry key="S5" value="3.825454392181628E-186" />
+      <entry key="S10" value="3.816545056949564E-93" />
+      <entry key="S30" value="3.914616496472293E-31" />
+      <entry key="S60" value="1.2503819231224752E-15" />
+      <entry key="M2" value="7.0707861379017E-8" />
+      <entry key="M5" value="0.0031695887982581086" />
+      <entry key="M10" value="0.11259733020925139" />
+      <entry key="M15" value="0.37014575787307225" />
+      <entry key="M30" value="1.223893563395173" />
+      <entry key="H1" value="2.7720044076823767" />
+      <entry key="H2" value="8.443423750056237" />
+      <entry key="H4" value="24.052186696893408" />
+      <entry key="D1" value="562.8970848520516" />
+      <entry key="W1" value="3046.8537705835924" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000000152142663" />
+      <entry key="MS500" value="1.0273180818878243" />
+      <entry key="S2" value="1.406548675613169" />
+      <entry key="S5" value="1.6976619222853366" />
+      <entry key="S10" value="1.8352615891356052" />
+      <entry key="S30" value="1.9417612930435424" />
+      <entry key="S60" value="1.9704438639321404" />
+      <entry key="M2" value="1.9851111085972906" />
+      <entry key="M5" value="1.9947870034692916" />
+      <entry key="M10" value="2.024742050086095" />
+      <entry key="M15" value="2.089633899236168" />
+      <entry key="M30" value="2.3017082472618" />
+      <entry key="H1" value="2.549690514140314" />
+      <entry key="H2" value="2.7440962645236904" />
+      <entry key="H4" value="3.0593771434618726" />
+      <entry key="D1" value="56.26505019844329" />
+      <entry key="W1" value="449.20311504501564" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.05440945264601079" />
-      <entry key="MS500" value="0.5921937430418609" />
-      <entry key="S2" value="1.3564878981601183" />
-      <entry key="S5" value="2.216986696785744" />
-      <entry key="S10" value="3.530699401779508" />
-      <entry key="S30" value="7.765246128197312" />
-      <entry key="S60" value="10.89026047419823" />
-      <entry key="M2" value="14.263759859030788" />
-      <entry key="M5" value="20.015061845479188" />
-      <entry key="M10" value="23.95541879119966" />
-      <entry key="M15" value="25.691105823807227" />
-      <entry key="M30" value="28.031360571271684" />
-      <entry key="H1" value="31.43414123934108" />
-      <entry key="H2" value="36.87698705781478" />
-      <entry key="H4" value="50.895370291323424" />
-      <entry key="D1" value="722.4617416006397" />
-      <entry key="W1" value="3569.5620862707897" />
+      <entry key="MS100" value="0.003906250011984827" />
+      <entry key="MS500" value="0.33641921587688317" />
+      <entry key="S2" value="1.0422595902233251" />
+      <entry key="S5" value="1.499770556654013" />
+      <entry key="S10" value="1.723711480848492" />
+      <entry key="S30" value="1.9012783946149985" />
+      <entry key="S60" value="1.949754490867404" />
+      <entry key="M2" value="1.9746516705459796" />
+      <entry key="M5" value="1.993741496754368" />
+      <entry key="M10" value="2.13516858954093" />
+      <entry key="M15" value="2.4582391933844794" />
+      <entry key="M30" value="3.52467874239871" />
+      <entry key="H1" value="5.321133253012951" />
+      <entry key="H2" value="11.187161279905167" />
+      <entry key="H4" value="27.111295990065905" />
+      <entry key="D1" value="619.1605758724718" />
+      <entry key="W1" value="3496.0550465587976" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -214,35 +121,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.index.js.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "git.auto.fetch.suggestion.counter": "3",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/dekrylov/WebstormProjects/university-web-labs/css",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;3&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dekrylov/WebstormProjects/university-web-labs/css&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/css" />
@@ -284,23 +191,7 @@
       <workItem from="1795282036993" duration="3687000" />
       <workItem from="1795333202718" duration="16064000" />
       <workItem from="1795424729417" duration="4074000" />
-      <workItem from="1795525042816" duration="21329000" />
-    </task>
-    <task id="LOCAL-00001" summary="feat(notch): добавить монобровь&#10;&#10;- Добавлена динамическая монобровь (notch) с анимацией раскрытия при наведении&#10;- Вынесены CSS-переменные для рамки и скруглений в variables.css&#10;- Добавлена декоративная рамка страницы через body::before и header::before&#10;- Подключены стили и настроена структура index.html с навигацией">
-      <option name="closed" value="true" />
-      <created>1792068271128</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1792068271128</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat(video): добавить видео-коллаж с CSS-маской и динамическую навигацию в нотче&#10;&#10;- Реализован видео-коллаж с анимированной полосатой маской (mask-image)&#10;- Навигация в нотче скрывает неактивные ссылки и раскрывает при наведении&#10;- Сетка навигации вынесена в .header__nav с динамическим --columns&#10;- Добавлены плавная прокрутка и фоновый цвет страницы&#10;- Исправлены z-index для корректного наложения слоёв&#10;- Добавлены секции-заглушки для тестирования прокрутки">
-      <option name="closed" value="true" />
-      <created>1792436869756</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1792436869756</updated>
+      <workItem from="1795525042816" duration="25047000" />
     </task>
     <task id="LOCAL-00003" summary="refactor: перестроить layout страницы на CSS Grid и Flexbox&#10;&#10;- Добавлена grid-разметка .page с областями header/sidebar/main&#10;- Стили коллажа вынесены из sidebar.css в отдельный collage.css&#10;- Добавлены карточки через Flexbox с flex-wrap в card.css&#10;- Сайдбар привязан к grid-area с position: sticky&#10;- Структура index.html переписана: обёртка .page, семантические секции&#10;- Удалён placeholder-текст, добавлена якорная навигация в сайдбаре">
       <option name="closed" value="true" />
@@ -678,7 +569,23 @@
       <option name="project" value="LOCAL" />
       <updated>1795624946499</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="build(project): Сделать проект мультимодульным">
+      <option name="closed" value="true" />
+      <created>1795682881817</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1795682881817</updated>
+    </task>
+    <task id="LOCAL-00051" summary="build(project): Добавить схему БД и gitignore">
+      <option name="closed" value="true" />
+      <created>1795683045524</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1795683045524</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +603,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: адаптировать карточки фильмов и оверскролл под мобильные экраны&#10;&#10;- Задан background-color для html для устранения полос при оверскролле на мобильных&#10;- Добавлены гибкие отступы clamp() в карточках&#10;- Скрыты чипы категорий на экранах шириной менее 440px" />
     <MESSAGE value="feat: стилизовать горизонтальный таймлайн на странице «О нас»&#10;&#10;- Добавлен scroll-snap в .timeline__container для пошаговой прокрутки&#10;- Стилизованы элементы карточек истории: годы (.timeline-stamp__year) и текст (.timeline-stamp__text)&#10;- Скрыты стандартные полосы прокрутки для хронологической ленты&#10;- Разметка страницы переведена на семантические теги (&lt;main&gt;, &lt;article&gt;)&#10;- Переключатель тем вынесен в адаптивный контейнер .theme-switcher-wrapper" />
     <MESSAGE value="fix(about): Исправить стиль активного раздела в футере" />
     <MESSAGE value="feat(about): Заменить текст-заглушку на актуальный таймлайн" />
@@ -721,6 +627,7 @@
     <MESSAGE value="refactor(cart): Изменить стиль кнопки в хедере" />
     <MESSAGE value="fix(theme): Исправить цвета в переключателе тем" />
     <MESSAGE value="build(project): Сделать проект мультимодульным" />
-    <option name="LAST_COMMIT_MESSAGE" value="build(project): Сделать проект мультимодульным" />
+    <MESSAGE value="build(project): Добавить схему БД и gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(project): Добавить схему БД и gitignore" />
   </component>
 </project>
