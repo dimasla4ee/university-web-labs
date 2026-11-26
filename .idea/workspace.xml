@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode">
-      <change afterPath="$PROJECT_DIR$/backend/testing/test_crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/crud.py" afterDir="false" />
+    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="feat(backend): реализовать CRUD-методы для товаров, категорий и заказов&#10;&#10;- добавить получение списка категорий с подсчетом количества товаров;&#10;- реализовать фильтрацию товаров по категориям, тегам, диапазону цен, поисковому запросу и пагинацию;&#10;- добавить выборку детальной информации о товаре с JSON-агрегацией тегов;&#10;- реализовать транзакционное создание заказа с валидацией наличия на складе (`FOR UPDATE`) и списанием остатков;&#10;- написать асинхронные тесты для проверки логики CRUD-функций и обработки ошибок;&#10;- обновить зависимости в `requirements.txt` (добавлен `pytest` и сопутствующие пакеты).">
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,15 +192,7 @@
       <workItem from="1795282036993" duration="3687000" />
       <workItem from="1795333202718" duration="16064000" />
       <workItem from="1795424729417" duration="4074000" />
-      <workItem from="1795525042816" duration="25839000" />
-    </task>
-    <task id="LOCAL-00004" summary="feat: оформить карточки фильмов с изображениями и подключить шрифт Literata&#10;&#10;- Карточки дополнены обложками с градиентным оверлеем и backdrop-filter&#10;- Позиции маски в коллаже рассчитываются динамически через calc() и --slots&#10;- Вертикальный текст в коллаже реализован через writing-mode вместо transform&#10;- Подключён шрифт Literata через Google Fonts&#10;- Весь контент переведён на русский язык (названия фильмов, навигация)&#10;- Скорректирован фон страницы и z-index декоративной рамки">
-      <option name="closed" value="true" />
-      <created>1793637348809</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1793637348809</updated>
+      <workItem from="1795525042816" duration="26491000" />
     </task>
     <task id="LOCAL-00005" summary="feat: добавить scroll-driven анимацию сужения коллажа&#10;&#10;- Коллаж занимает всю высоту вьюпорта и плавно сужается при прокрутке&#10;  через animation-timeline: scroll(root)&#10;- Сайдбар вертикально центрирован через margin-top: calc(50svh - 100px)&#10;- Убран заголовок «Фильмография A24» из секции коллажа">
       <option name="closed" value="true" />
@@ -586,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795705399708</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="feat(backend): реализовать CRUD-методы для товаров, категорий и заказов&#10;&#10;- добавить получение списка категорий с подсчетом количества товаров;&#10;- реализовать фильтрацию товаров по категориям, тегам, диапазону цен, поисковому запросу и пагинацию;&#10;- добавить выборку детальной информации о товаре с JSON-агрегацией тегов;&#10;- реализовать транзакционное создание заказа с валидацией наличия на складе (`FOR UPDATE`) и списанием остатков;&#10;- написать асинхронные тесты для проверки логики CRUD-функций и обработки ошибок;&#10;- обновить зависимости в `requirements.txt` (добавлен `pytest` и сопутствующие пакеты).">
+      <option name="closed" value="true" />
+      <created>1795710030842</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1795710030842</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +604,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(about): Исправить стиль активного раздела в футере" />
     <MESSAGE value="feat(about): Заменить текст-заглушку на актуальный таймлайн" />
     <MESSAGE value="feat(about): Добавить сайдбар на страницу&#10;&#10;Сайдбар позволяет перемещаться по таймстэмпам без скроллинга. Для реализации сайдбара был использован `layout.css`." />
     <MESSAGE value="feat: добавить скрипт синхронизации таймлайна с навигацией и расширить layout&#10;&#10;- Создан js/timeline.js: синхронизирует горизонтальный скролл хроники с подсвечиванием ссылок сайдбара&#10;- Добавлен класс модификатора .page--about в layout.css под структуру страницы истории&#10;- Скорректированы выравнивание и внутренние отступы body, sidebar и timeline&#10;- Настроена синхронизация состояния .is-active и атрибутов aria-current" />
@@ -629,6 +628,7 @@
     <MESSAGE value="build(project): Сделать проект мультимодульным" />
     <MESSAGE value="build(project): Добавить схему БД и gitignore" />
     <MESSAGE value="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(backend): инициализировать бэкенд и настроить подключение к PostgreSQL&#10;&#10;- Создана базовая структура приложения (модули app и testing)&#10;- Реализовано асинхронное управление пулом соединений с БД через asyncpg&#10;- Добавлен тестовый скрипт проверки подключения test_connection.py&#10;- Добавлены зависимости в requirements.txt (asyncpg, python-dotenv)&#10;- Добавлен шаблон переменных окружения .env.example&#10;- Обновлён .gitignore для файлов виртуального окружения и .vscode" />
+    <MESSAGE value="feat(backend): реализовать CRUD-методы для товаров, категорий и заказов&#10;&#10;- добавить получение списка категорий с подсчетом количества товаров;&#10;- реализовать фильтрацию товаров по категориям, тегам, диапазону цен, поисковому запросу и пагинацию;&#10;- добавить выборку детальной информации о товаре с JSON-агрегацией тегов;&#10;- реализовать транзакционное создание заказа с валидацией наличия на складе (`FOR UPDATE`) и списанием остатков;&#10;- написать асинхронные тесты для проверки логики CRUD-функций и обработки ошибок;&#10;- обновить зависимости в `requirements.txt` (добавлен `pytest` и сопутствующие пакеты)." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(backend): реализовать CRUD-методы для товаров, категорий и заказов&#10;&#10;- добавить получение списка категорий с подсчетом количества товаров;&#10;- реализовать фильтрацию товаров по категориям, тегам, диапазону цен, поисковому запросу и пагинацию;&#10;- добавить выборку детальной информации о товаре с JSON-агрегацией тегов;&#10;- реализовать транзакционное создание заказа с валидацией наличия на складе (`FOR UPDATE`) и списанием остатков;&#10;- написать асинхронные тесты для проверки логики CRUD-функций и обработки ошибок;&#10;- обновить зависимости в `requirements.txt` (добавлен `pytest` и сопутствующие пакеты)." />
   </component>
 </project>
