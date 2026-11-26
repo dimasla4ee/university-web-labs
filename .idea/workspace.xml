@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="build(project): Сделать проект мультимодульным">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/university-web-labs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/collage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/contacts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/feedback-form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/frame.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/theme-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/tickets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/timeline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/tokens-modern.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/css/tokens.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/html/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/html/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/notch-interaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/storage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/js/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/add_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/close_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/dark_mode_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/light_mode_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/monitor_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/icons/remove_24dp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/a24_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/backrooms.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/map.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/misty-green.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/mother-mary.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/onslaught.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/primetime.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/images/you-can-see-everything.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/resources/videos/primetime-trailer.webm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/university-web-labs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/collage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/contacts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/feedback-form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/frame.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/theme-switcher.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/tickets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/timeline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/tokens-modern.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/tokens.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/notch-interaction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/storage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/add_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/close_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/dark_mode_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/light_mode_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/monitor_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icons/remove_24dp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/a24_logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/backrooms.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/map.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/misty-green.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/mother-mary.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/onslaught.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/primetime.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/you-can-see-everything.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/videos/primetime-trailer.webm" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="45" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="arena/703bf0af-university-web-labs" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dimasla4ee&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dimasla4ee/university-web-labs.git&quot;,
+    &quot;accountId&quot;: &quot;4417f192-2b71-46a7-8079-423027b1ae52&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000021608045297" />
+      <entry key="MS500" value="1.0736350268198716" />
+      <entry key="S2" value="1.6002624842622253" />
+      <entry key="S5" value="2.368453033595344" />
+      <entry key="S10" value="3.634847272812622" />
+      <entry key="S30" value="7.823085811132693" />
+      <entry key="S60" value="10.92658487373781" />
+      <entry key="M2" value="14.284605577148922" />
+      <entry key="M5" value="20.02422155593762" />
+      <entry key="M10" value="23.960159308821783" />
+      <entry key="M15" value="25.69430435987006" />
+      <entry key="M30" value="28.03298029461489" />
+      <entry key="H1" value="31.434844992041263" />
+      <entry key="H2" value="36.855074003204216" />
+      <entry key="H4" value="50.31454510917903" />
+      <entry key="D1" value="658.7130503391709" />
+      <entry key="W1" value="3111.784648410811" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="7.191531124831449E-242" />
+      <entry key="M2" value="2.681703026964664E-121" />
+      <entry key="M5" value="5.9069633039535956E-49" />
+      <entry key="M10" value="7.685677172105024E-25" />
+      <entry key="M15" value="8.390547544067483E-17" />
+      <entry key="M30" value="9.210609020901749E-9" />
+      <entry key="H1" value="1.134533432240976E-4" />
+      <entry key="H2" value="0.022330935448471482" />
+      <entry key="H4" value="0.5811232335634428" />
+      <entry key="D1" value="63.75052116756756" />
+      <entry key="W1" value="457.7793202456075" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.05440945264601079" />
+      <entry key="MS500" value="0.5921937430418609" />
+      <entry key="S2" value="1.3564878981601183" />
+      <entry key="S5" value="2.216986696785744" />
+      <entry key="S10" value="3.530699401779508" />
+      <entry key="S30" value="7.765246128197312" />
+      <entry key="S60" value="10.89026047419823" />
+      <entry key="M2" value="14.263759859030788" />
+      <entry key="M5" value="20.015061845479188" />
+      <entry key="M10" value="23.95541879119966" />
+      <entry key="M15" value="25.691105823807227" />
+      <entry key="M30" value="28.031360571271684" />
+      <entry key="H1" value="31.43414123934108" />
+      <entry key="H2" value="36.87698705781478" />
+      <entry key="H4" value="50.895370291323424" />
+      <entry key="D1" value="722.4617416006397" />
+      <entry key="W1" value="3569.5620862707897" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3KUyYV4dJpHhqbgQIAxTYBOyt61" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "git.auto.fetch.suggestion.counter": "3",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/dekrylov/WebstormProjects/university-web-labs/css",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/resources/icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/images" />
+      <recent name="$PROJECT_DIR$/resources/videos" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fdecc23-e9b6-40cc-b542-3242e0df13f4" name="Changes" comment="" />
+      <created>1791626488238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791626488238</updated>
+      <workItem from="1791626489240" duration="2215000" />
+      <workItem from="1792057497020" duration="17674000" />
+      <workItem from="1792239308841" duration="4320000" />
+      <workItem from="1792325221238" duration="14672000" />
+      <workItem from="1792677174792" duration="2381000" />
+      <workItem from="1793363279155" duration="20815000" />
+      <workItem from="1793647788914" duration="101000" />
+      <workItem from="1793705162355" duration="7200000" />
+      <workItem from="1793781984443" duration="25102000" />
+      <workItem from="1794158015874" duration="1776000" />
+      <workItem from="1794230362150" duration="8313000" />
+      <workItem from="1795090284746" duration="336000" />
+      <workItem from="1795090715687" duration="27700000" />
+      <workItem from="1795282036993" duration="3687000" />
+      <workItem from="1795333202718" duration="16064000" />
+      <workItem from="1795424729417" duration="4074000" />
+      <workItem from="1795525042816" duration="21329000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat(notch): добавить монобровь&#10;&#10;- Добавлена динамическая монобровь (notch) с анимацией раскрытия при наведении&#10;- Вынесены CSS-переменные для рамки и скруглений в variables.css&#10;- Добавлена декоративная рамка страницы через body::before и header::before&#10;- Подключены стили и настроена структура index.html с навигацией">
+      <option name="closed" value="true" />
+      <created>1792068271128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792068271128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(video): добавить видео-коллаж с CSS-маской и динамическую навигацию в нотче&#10;&#10;- Реализован видео-коллаж с анимированной полосатой маской (mask-image)&#10;- Навигация в нотче скрывает неактивные ссылки и раскрывает при наведении&#10;- Сетка навигации вынесена в .header__nav с динамическим --columns&#10;- Добавлены плавная прокрутка и фоновый цвет страницы&#10;- Исправлены z-index для корректного наложения слоёв&#10;- Добавлены секции-заглушки для тестирования прокрутки">
+      <option name="closed" value="true" />
+      <created>1792436869756</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792436869756</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refactor: перестроить layout страницы на CSS Grid и Flexbox&#10;&#10;- Добавлена grid-разметка .page с областями header/sidebar/main&#10;- Стили коллажа вынесены из sidebar.css в отдельный collage.css&#10;- Добавлены карточки через Flexbox с flex-wrap в card.css&#10;- Сайдбар привязан к grid-area с position: sticky&#10;- Структура index.html переписана: обёртка .page, семантические секции&#10;- Удалён placeholder-текст, добавлена якорная навигация в сайдбаре">
+      <option name="closed" value="true" />
+      <created>1793370775518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1793370775518</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: оформить карточки фильмов с изображениями и подключить шрифт Literata&#10;&#10;- Карточки дополнены обложками с градиентным оверлеем и backdrop-filter&#10;- Позиции маски в коллаже рассчитываются динамически через calc() и --slots&#10;- Вертикальный текст в коллаже реализован через writing-mode вместо transform&#10;- Подключён шрифт Literata через Google Fonts&#10;- Весь контент переведён на русский язык (названия фильмов, навигация)&#10;- Скорректирован фон страницы и z-index декоративной рамки">
+      <option name="closed" value="true" />
+      <created>1793637348809</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1793637348809</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: добавить scroll-driven анимацию сужения коллажа&#10;&#10;- Коллаж занимает всю высоту вьюпорта и плавно сужается при прокрутке&#10;  через animation-timeline: scroll(root)&#10;- Сайдбар вертикально центрирован через margin-top: calc(50svh - 100px)&#10;- Убран заголовок «Фильмография A24» из секции коллажа">
+      <option name="closed" value="true" />
+      <created>1793644679504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1793644679504</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: дополнить карточки фильмов метаданными и оформить теги&#10;&#10;- В карточки добавлены чипы с годом, жанром и хронометражем&#10;- Добавлено описание с указанием режиссёра под разделителем&#10;- Стилизованы .cards__chip, .cards__chip-container и hr&#10;- Скорректировано выравнивание содержимого карточек (flex-direction, gap, padding)">
+      <option name="closed" value="true" />
+      <created>1793709437227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1793709437227</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: добавить логотип A24 в сайдбар через CSS-маску&#10;&#10;- Логотип отображается через mask-image с CSS-переменной --icon&#10;- Скорректирован отступ сайдбара (margin-top)">
+      <option name="closed" value="true" />
+      <created>1793710871164</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1793710871164</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: стилизовать навигацию сайдбара с hover-эффектами и индикатором&#10;&#10;- Добавлены стили ссылок сайдбара с плавными переходами цвета, фона и отступов&#10;- Реализован вертикальный индикатор через ::before при наведении&#10;- Логотип перенесён из notch.css в sidebar.css&#10;- scroll-behavior: smooth перенесён с body на html&#10;- Скорректирована конечная ширина коллажа в scroll-driven анимации">
+      <option name="closed" value="true" />
+      <created>1793712809823</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793712809823</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: модуляризировать CSS-архитектуру и внедрить дизайн-токены&#10;&#10;- Разнесены стили по файлам: frame.css, header.css, layout.css, tokens.css&#10;- variables.css заменён на tokens.css с типографикой, весами и цветами&#10;- Унифицированы BEM-классы: header__link, sidebar__link, collage__mask&#10;- Секция коллажа переведена на grid-area: hero&#10;- Рамка и нотч используют CSS-переменные вместо захардкоженных значений&#10;- Исправлен font-family в карточках (SansSerif → sans-serif)&#10;- Сжаты изображения mother-mary, onslaught, primetime (webp)">
+      <option name="closed" value="true" />
+      <created>1793787915241</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1793787915241</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor: перевести стили на дизайн-токены и адаптивную сетку&#10;&#10;- Все захардкоженные цвета, размеры и шрифты заменены на CSS-переменные из tokens.css&#10;- Сетка layout переведена на адаптивные колонки через calc(100svw / 6.5)&#10;- Секция hero с scroll-driven анимацией перенесена из collage.css в layout.css&#10;- Цвета сайдбара и карточек используют relative color syntax (rgb from)&#10;- Добавлена поддержка color-scheme: light dark на уровне html&#10;- Логотип сайдбара сделан адаптивным через процентные размеры&#10;- Нотч использует переменные --header-w/--header-h и inset-сокращение">
+      <option name="closed" value="true" />
+      <created>1793797736380</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1793797736380</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: реструктурировать карточки фильмов и добавить синопсисы&#10;&#10;- Карточки разделены на .card__visual (постер, метаданные) и .card__description (сюжет)&#10;- Добавлены описания сюжетов для всех шести фильмов&#10;- Карточки получили тень и фоновый цвет через color-mix&#10;- Логотип сайдбара переведён на aspect-ratio вместо padding-bottom хака&#10;- Сетка layout обновлена: область main переименована в aside">
+      <option name="closed" value="true" />
+      <created>1793888555519</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1793888555519</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: добавить футер и информационный блок о A24&#10;&#10;- Создан footer.css с навигацией, внешними ссылками и копирайтом&#10;- Добавлен блок .info__block с описанием кинокомпании&#10;- Сетка layout дополнена областью info между hero и cards&#10;- Обновлён заголовок страницы">
+      <option name="closed" value="true" />
+      <created>1793963809025</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1793963809025</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: добавить футер и информационный блок о A24&#10;&#10;- Создан footer.css с навигацией, внешними ссылками и копирайтом&#10;- Добавлен блок .info__block с описанием кинокомпании&#10;- Сетка layout дополнена областью info между hero и cards&#10;- Обновлён заголовок страницы&#10;- Смягчена тень у .card">
+      <option name="closed" value="true" />
+      <created>1793963997487</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1793963997487</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat(theme): добавлена возможность переключения темы&#10;&#10;- Добавлены CSS-правила `color-scheme` для светлой и тёмной темы в `css/tokens.css`.&#10;- Добавлен скрипт `js/theme.js` и кнопка переключения темы в `index.html`.&#10;- Заменены дефисы на неразрывные в словах «комиком-авангардистом» и «Нью-Мексико».">
+      <option name="closed" value="true" />
+      <created>1794231958542</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1794231958542</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(theme): изменён выбор темы с цикла на тоггл&#10;&#10;- заменена кнопка циклического переключения темы на группу кнопок system/light/dark с иконками и ARIA-атрибутами&#10;- обновлён `js/theme.js`: активная кнопка получает `disabled` и `aria-pressed`, выбор сохраняется в `localStorage`&#10;- подключён `css/theme-switcher.css` в `index.html`&#10;- удалены дублирующиеся CSS-токены и `color-scheme` из `theme-switcher.css` — используются значения из `tokens.css`&#10;- добавлены `transition` для плавной смены цветов&#10;- переформатированы переносы строк в описаниях карточек без изменения текста">
+      <option name="closed" value="true" />
+      <created>1794233941673</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1794233941673</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat(header): анимировано появление неактивных ссылок при наведении&#10;&#10;- добавлены плавные переходы `opacity`, `transform` и `display` (через `allow-discrete`) для `.header__link--inactive`, а также блок `@starting-style` для анимации появления&#10;- при наведении на `.header__notch` активная ссылка получает свечение через `text-shadow`&#10;- у активной ссылки «Главная» убран пустой `href` и добавлен `aria-current=&quot;page&quot;`">
+      <option name="closed" value="true" />
+      <created>1794243671930</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1794243671930</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat(layout): адаптивный текст коллажа, компактная шапка и трейлер&#10;&#10;- `.collage` получил `container-type: inline-size`, заголовок теперь масштабируется через `clamp(16px, 6cqw, var(--fs-hero))`&#10;- уменьшена высота шапки: `--header-h` с 180px до 120px&#10;- добавлен файл трейлера в репозиторий">
+      <option name="closed" value="true" />
+      <created>1794246477121</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1794246477121</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: добавить адаптивность для мобильных экранов и флюидную типографику&#10;&#10;- Переведена сетка .page на mobile-first подход с медиазапросом (min-width: 1024px)&#10;- Адаптированы сайдбар, переключатель тем и чипы карточек под экраны от 768px&#10;- Токены размеров шрифтов (--fs-lg, --fs-hero) переведены на clamp()">
+      <option name="closed" value="true" />
+      <created>1795096100804</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1795096100804</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: сверстать мобильную страницу «О нас» с горизонтальным таймлайном&#10;&#10;- Наполнена страница html/about.html с информацией об истории компании&#10;- Создан модуль timeline.css с горизонтальной прокруткой (overflow-x: auto)&#10;- Подключена шапка с нотчем, переключатель тем, футер и скрипт theme.js&#10;- Язык страницы изменён на lang=&quot;ru&quot;, добавлен корректный title&#10;- Страница сверстана под устройства с шириной экрана 320px">
+      <option name="closed" value="true" />
+      <created>1795109263199</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1795109263199</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: базово наполнить страницу «Контакты»&#10;&#10;- Наполнена страница html/contacts.html: добавлена шапка с нотчем, переключатель тем и футер&#10;- Обновлён заголовок &lt;title&gt; на странице «О нас» для единообразия&#10;- Настроены активные состояния ссылок в навигации и футере для страницы контактов">
+      <option name="closed" value="true" />
+      <created>1795109828408</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1795109828408</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor: переписать стили сетки и сайдбара с использованием CSS Nesting&#10;&#10;- Внедрен CSS Nesting в layout.css и sidebar.css&#10;- Настроена адаптивная сетка под узкие экраны с использованием clamp()&#10;- Заменён relative color syntax на color-mix() для цвета ссылок сайдбара&#10;- Переведены единицы измерения cqw на vw в токенах типографики&#10;- Исправлены дефисы в текстах на главной странице&#10;- Исправлен баг горизонтального переполнения на экранах 320px">
+      <option name="closed" value="true" />
+      <created>1795177501186</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1795177501186</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor: унифицировать цветовые токены и оптимизировать переключение тем&#10;&#10;- Систематизированы токены в tokens.css (--bg-*, --text-*, --border-*, --transition-theme)&#10;- Обновлены переменные в base, card, collage, sidebar и theme-switcher&#10;- Вынесена единая переменная плавного перехода тем --transition-theme&#10;- Переписан theme-switcher.css с использованием CSS Nesting и локальных переменных&#10;- Добавлен список задач TODO в index.html&#10;- Исправлена ошибка при которой на устройствах с шириной 320px иконки переключения тем были невидимыми">
+      <option name="closed" value="true" />
+      <created>1795190414819</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1795190414819</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: добавить интерактивное управление нотчем с клавиатуры и сенсорных экранов&#10;&#10;- Создан скрипт js/notch-interaction.js с логикой клика, клавиатурной навигации и закрытия по клику вне нотча&#10;- Добавлены ARIA-атрибуты (role=&quot;button&quot;, aria-expanded, tabindex) на элемент нотча во всех HTML-файлах&#10;- Обновлён header.css: поддержка состояния :where([aria-expanded=&quot;true&quot;], .is-open), адаптивная ширина clamp()&#10;- Настроен scroll-margin-top: 54px для :target селекторов">
+      <option name="closed" value="true" />
+      <created>1795193367275</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1795193367275</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix: адаптировать карточки фильмов и оверскролл под мобильные экраны&#10;&#10;- Задан background-color для html для устранения полос при оверскролле на мобильных&#10;- Добавлены гибкие отступы clamp() в карточках&#10;- Скрыты чипы категорий на экранах шириной менее 440px">
+      <option name="closed" value="true" />
+      <created>1795195371461</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1795195371461</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: стилизовать горизонтальный таймлайн на странице «О нас»&#10;&#10;- Добавлен scroll-snap в .timeline__container для пошаговой прокрутки&#10;- Стилизованы элементы карточек истории: годы (.timeline-stamp__year) и текст (.timeline-stamp__text)&#10;- Скрыты стандартные полосы прокрутки для хронологической ленты&#10;- Разметка страницы переведена на семантические теги (&lt;main&gt;, &lt;article&gt;)&#10;- Переключатель тем вынесен в адаптивный контейнер .theme-switcher-wrapper">
+      <option name="closed" value="true" />
+      <created>1795284336100</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1795284336100</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: стилизовать горизонтальный таймлайн на странице «О нас»&#10;&#10;- Добавлен scroll-snap в .timeline__container для пошаговой прокрутки&#10;- Стилизованы элементы карточек истории: годы (.timeline-stamp__year) и текст (.timeline-stamp__text)&#10;- Скрыты стандартные полосы прокрутки для хронологической ленты&#10;- Разметка страницы переведена на семантические теги (&lt;main&gt;, &lt;article&gt;)&#10;- Переключатель тем вынесен в адаптивный контейнер .theme-switcher-wrapper">
+      <option name="closed" value="true" />
+      <created>1795284413344</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1795284413344</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix(about): Исправить стиль активного раздела в футере">
+      <option name="closed" value="true" />
+      <created>1795284500151</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1795284500151</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat(about): Заменить текст-заглушку на актуальный таймлайн">
+      <option name="closed" value="true" />
+      <created>1795285108761</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1795285108761</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat(about): Добавить сайдбар на страницу&#10;&#10;Сайдбар позволяет перемещаться по таймстэмпам без скроллинга. Для реализации сайдбара был использован `layout.css`.">
+      <option name="closed" value="true" />
+      <created>1795286056011</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1795286056011</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: добавить скрипт синхронизации таймлайна с навигацией и расширить layout&#10;&#10;- Создан js/timeline.js: синхронизирует горизонтальный скролл хроники с подсвечиванием ссылок сайдбара&#10;- Добавлен класс модификатора .page--about в layout.css под структуру страницы истории&#10;- Скорректированы выравнивание и внутренние отступы body, sidebar и timeline&#10;- Настроена синхронизация состояния .is-active и атрибутов aria-current">
+      <option name="closed" value="true" />
+      <created>1795336508034</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1795336508034</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat(header): Удалить логику наведения на хедер&#10;&#10;Наведение на хедер вызывало проблему при которой на элементы навигации приходилось нажимать дважды, чтобы перенаправление сработало.">
+      <option name="closed" value="true" />
+      <created>1795336732333</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1795336732333</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix(about): Исправить отображение футера">
+      <option name="closed" value="true" />
+      <created>1795341617503</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1795341617503</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: сверстать страницу «Контакты» с блоками офисов, карты и департаментов&#10;&#10;- Добавлен модуль css/contacts.css со стилями карточек офисов, фрагмента карты и списка департаментов&#10;- Наполнена страница html/contacts.html семантической разметкой (&lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;address&gt;)&#10;- Переключатель тем интегрирован в сайдбар на странице контактов&#10;- Добавлена поддержка селектора .sidebar--contacts в css/sidebar.css">
+      <option name="closed" value="true" />
+      <created>1795344550838</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1795344550838</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: сверстать страницу «Контакты» с блоками офисов, карты и департаментов&#10;&#10;- Добавлен модуль css/contacts.css со стилями карточек офисов, фрагмента карты и списка департаментов&#10;- Наполнена страница html/contacts.html семантической разметкой (&lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;address&gt;)&#10;- Переключатель тем интегрирован в сайдбар на странице контактов&#10;- Добавлена поддержка селектора .sidebar--contacts в css/sidebar.css">
+      <option name="closed" value="true" />
+      <created>1795344569735</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1795344569735</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat(map): Конвертировать заглушку карты в webp">
+      <option name="closed" value="true" />
+      <created>1795344905781</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1795344905781</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat(theme): Реализовать переключение тем согласно заданию&#10;&#10;`tokens.css` теперь вместо функции `light-dark()` использует медиа-запрос `@media (prefers-color-scheme: dark)`.&#10;Реализация на `light-dark()` вынесена в отдельный файл `tokens-modern.css` для удобного переключения.">
+      <option name="closed" value="true" />
+      <created>1795349637069</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1795349637069</updated>
+    </task>
+    <task id="LOCAL-00037" summary="chore: Удалить неиспользуемый код">
+      <option name="closed" value="true" />
+      <created>1795364433658</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1795364433658</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat(js): Создать заготовку для JavaScript&#10;&#10;Созданы файлы для последующих скриптов:&#10;- validation.js (логика проверок),&#10;- storage.js (работа с данными),&#10;- ui.js (отрисовка),&#10;- main.js (точка входа).">
+      <option name="closed" value="true" />
+      <created>1795541248353</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1795541248354</updated>
+    </task>
+    <task id="LOCAL-00039" summary="chore(todo): Выделить задачи для страницы &quot;Контакты&quot;">
+      <option name="closed" value="true" />
+      <created>1795588660612</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1795588660612</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat(contacts): Изменить текстовые формулировки на странице">
+      <option name="closed" value="true" />
+      <created>1795589050301</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1795589050301</updated>
+    </task>
+    <task id="LOCAL-00041" summary="refactor(feedback): Адаптировать отступы под разные экраны">
+      <option name="closed" value="true" />
+      <created>1795589663883</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1795589663883</updated>
+    </task>
+    <task id="LOCAL-00042" summary="refactor(password): Адаптировать сложность пароля под разные экраны">
+      <option name="closed" value="true" />
+      <created>1795591640435</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1795591640435</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix(contacts): Исправить позиционирование бокового меню">
+      <option name="closed" value="true" />
+      <created>1795592324870</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1795592324870</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix(validation): Исправить валидацию полей">
+      <option name="closed" value="true" />
+      <created>1795593476686</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1795593476686</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix(password): Исправить индикатор сложности пароля">
+      <option name="closed" value="true" />
+      <created>1795597716254</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1795597716254</updated>
+    </task>
+    <task id="LOCAL-00046" summary="refactor(script): Мигрировать скрипты на ES-модули">
+      <option name="closed" value="true" />
+      <created>1795598744556</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1795598744556</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat(cart): Заменить плейсхолдеры на SVG-иконки">
+      <option name="closed" value="true" />
+      <created>1795615791152</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1795615791152</updated>
+    </task>
+    <task id="LOCAL-00048" summary="refactor(cart): Изменить стиль кнопки в хедере">
+      <option name="closed" value="true" />
+      <created>1795616935631</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1795616935631</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fix(theme): Исправить цвета в переключателе тем">
+      <option name="closed" value="true" />
+      <created>1795624946498</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1795624946499</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: адаптировать карточки фильмов и оверскролл под мобильные экраны&#10;&#10;- Задан background-color для html для устранения полос при оверскролле на мобильных&#10;- Добавлены гибкие отступы clamp() в карточках&#10;- Скрыты чипы категорий на экранах шириной менее 440px" />
+    <MESSAGE value="feat: стилизовать горизонтальный таймлайн на странице «О нас»&#10;&#10;- Добавлен scroll-snap в .timeline__container для пошаговой прокрутки&#10;- Стилизованы элементы карточек истории: годы (.timeline-stamp__year) и текст (.timeline-stamp__text)&#10;- Скрыты стандартные полосы прокрутки для хронологической ленты&#10;- Разметка страницы переведена на семантические теги (&lt;main&gt;, &lt;article&gt;)&#10;- Переключатель тем вынесен в адаптивный контейнер .theme-switcher-wrapper" />
+    <MESSAGE value="fix(about): Исправить стиль активного раздела в футере" />
+    <MESSAGE value="feat(about): Заменить текст-заглушку на актуальный таймлайн" />
+    <MESSAGE value="feat(about): Добавить сайдбар на страницу&#10;&#10;Сайдбар позволяет перемещаться по таймстэмпам без скроллинга. Для реализации сайдбара был использован `layout.css`." />
+    <MESSAGE value="feat: добавить скрипт синхронизации таймлайна с навигацией и расширить layout&#10;&#10;- Создан js/timeline.js: синхронизирует горизонтальный скролл хроники с подсвечиванием ссылок сайдбара&#10;- Добавлен класс модификатора .page--about в layout.css под структуру страницы истории&#10;- Скорректированы выравнивание и внутренние отступы body, sidebar и timeline&#10;- Настроена синхронизация состояния .is-active и атрибутов aria-current" />
+    <MESSAGE value="feat(header): Удалить логику наведения на хедер&#10;&#10;Наведение на хедер вызывало проблему при которой на элементы навигации приходилось нажимать дважды, чтобы перенаправление сработало." />
+    <MESSAGE value="fix(about): Исправить отображение футера" />
+    <MESSAGE value="feat: сверстать страницу «Контакты» с блоками офисов, карты и департаментов&#10;&#10;- Добавлен модуль css/contacts.css со стилями карточек офисов, фрагмента карты и списка департаментов&#10;- Наполнена страница html/contacts.html семантической разметкой (&lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;address&gt;)&#10;- Переключатель тем интегрирован в сайдбар на странице контактов&#10;- Добавлена поддержка селектора .sidebar--contacts в css/sidebar.css" />
+    <MESSAGE value="feat(map): Конвертировать заглушку карты в webp" />
+    <MESSAGE value="feat(theme): Реализовать переключение тем согласно заданию&#10;&#10;`tokens.css` теперь вместо функции `light-dark()` использует медиа-запрос `@media (prefers-color-scheme: dark)`.&#10;Реализация на `light-dark()` вынесена в отдельный файл `tokens-modern.css` для удобного переключения." />
+    <MESSAGE value="chore: Удалить неиспользуемый код" />
+    <MESSAGE value="feat(js): Создать заготовку для JavaScript&#10;&#10;Созданы файлы для последующих скриптов:&#10;- validation.js (логика проверок),&#10;- storage.js (работа с данными),&#10;- ui.js (отрисовка),&#10;- main.js (точка входа)." />
+    <MESSAGE value="chore(todo): Выделить задачи для страницы &quot;Контакты&quot;" />
+    <MESSAGE value="feat(contacts): Изменить текстовые формулировки на странице" />
+    <MESSAGE value="refactor(feedback): Адаптировать отступы под разные экраны" />
+    <MESSAGE value="refactor(password): Адаптировать сложность пароля под разные экраны" />
+    <MESSAGE value="fix(contacts): Исправить позиционирование бокового меню" />
+    <MESSAGE value="fix(validation): Исправить валидацию полей" />
+    <MESSAGE value="fix(password): Исправить индикатор сложности пароля" />
+    <MESSAGE value="refactor(script): Мигрировать скрипты на ES-модули" />
+    <MESSAGE value="feat(cart): Заменить плейсхолдеры на SVG-иконки" />
+    <MESSAGE value="refactor(cart): Изменить стиль кнопки в хедере" />
+    <MESSAGE value="fix(theme): Исправить цвета в переключателе тем" />
+    <MESSAGE value="build(project): Сделать проект мультимодульным" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(project): Сделать проект мультимодульным" />
+  </component>
+</project>

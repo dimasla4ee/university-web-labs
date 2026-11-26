@@ -44,7 +44,7 @@ const init = () => {
     });
     let cart = Array.from(initialById, ([id, quantity]) => ({id, quantity}));
 
-    const render = () => renderCart({ cartDialog, cartCount, cartTrigger, headerNotch, films, cart });
+    const render = () => renderCart({cartDialog, cartCount, cartTrigger, headerNotch, films, cart});
     const saveCart = () => {
         storage.setCart(cart);
         render();
